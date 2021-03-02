@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use Carbon\Carbon;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class FakeUserSeeder extends Seeder
 {
@@ -14,6 +17,6 @@ class FakeUserSeeder extends Seeder
      */
     public function run()
     {
-       User::factory()->count(5)->create();
+       UserFactory::new('5');
     }
 }

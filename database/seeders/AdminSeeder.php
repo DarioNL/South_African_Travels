@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class UserSeeder extends Seeder
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,15 +16,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'id' => 'b3b2c903-55d9-40a9-a8db-e2c1bfb5352d',
+        DB::table('admins')->insert([
+            'id' => 'b3b9c903-55d9-40a9-a8db-e2c1bfb5352d',
             'first_name' => 'John',
-            'last_name' => 'Doo',
-            'email' => 'test@SAD.nl',
-            'address' => 'johnstraat',
-            'city' => 'Almere',
-            'zip_code' => '1429 LK',
-            'house_number' => '27',
+            'last_name' => 'Admin',
+            'email' => 'testadmin@SAD.nl',
             'phone' => '092344569',
             'password' => Hash::make('@SAD2020'),
             'created_at' => Carbon::today(),

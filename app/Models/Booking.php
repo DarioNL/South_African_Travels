@@ -48,4 +48,8 @@ class Booking extends Authenticatable
     public function travel(){
         return $this->hasOne(Travel::class, 'id', 'travel_id');
     }
+
+    public function travelers(){
+        return $this->hasOne(Travel::class, 'booking_id', 'id');
+    }
 }
