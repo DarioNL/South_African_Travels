@@ -29,7 +29,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'city' => $this->faker->city,
             'address' => $this->faker->streetName,
-            'zip_code' => '2603 WK',
+            'zipcode' => '2603 WK',
             'house_number' => $this->faker->numberBetween('1', '130'),
             'phone' => $this->faker->phoneNumber,
             'password' => Hash::make('@SAD2020'),

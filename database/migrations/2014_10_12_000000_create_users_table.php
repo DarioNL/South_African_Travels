@@ -20,11 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('address');
             $table->string('house_number');
-            $table->string('zip_code');
+            $table->string('zipcode');
             $table->string('city');
             $table->string('phone');
             $table->string('password');
             $table->rememberToken();
+            $table->timestamp('last_login')->nullable();
             $table->timestamps();
         });
     }

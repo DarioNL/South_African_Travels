@@ -23,7 +23,7 @@ class User extends Authenticatable
         'email',
         'address',
         'house_number',
-        'zip_code',
+        'zipcode',
         'city',
         'phone',
         'password',

@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TravelersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/traveler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_02_145939_create_travelers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/AccommodationsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/FakeUserSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SouthAfricanTravels.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SouthAfricanTravels.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_travels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_travels_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_create_accommodations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_accommodations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/FakeUserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/FakeUserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +143,7 @@
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/webpatser/laravel-uuid" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p9vitH4R32S9BsrLUczntZq9Bx" />
@@ -193,7 +190,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614608250293</updated>
       <workItem from="1614608252055" duration="8109000" />
-      <workItem from="1614695611318" duration="6357000" />
+      <workItem from="1614695611318" duration="12638000" />
     </task>
     <task id="LOCAL-00001" summary="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten">
       <created>1614618360170</created>
@@ -202,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614618360170</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="traveler model en migration toegevoegd&#10;alle seeders gemaakt">
+      <created>1614703023375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614703023375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +216,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten" />
+    <MESSAGE value="traveler model en migration toegevoegd&#10;alle seeders gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="traveler model en migration toegevoegd&#10;alle seeders gemaakt" />
   </component>
 </project>

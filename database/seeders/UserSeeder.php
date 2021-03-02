@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'email' => 'test@SAD.nl',
             'address' => 'johnstraat',
             'city' => 'Almere',
-            'zip_code' => '1429 LK',
+            'zipcode' => '1429 LK',
             'house_number' => '27',
             'phone' => '092344569',
             'password' => Hash::make('@SAD2020'),
