@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    South African Travels
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link" href="/home">Home</a>
+                        <a class="nav-item nav-link" href="/destinations">bestemmingen</a>
+                        <a class="nav-item nav-link" href="/travels">Reizen</a>
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -97,6 +100,27 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="footer-light">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 float-left item">
+                            <h3>pagina's</h3>
+                            <ul>
+                                <li><a href="#">Reizen</a></li>
+                                <li><a href="#">bestemmingen</a></li>
+                                <li><a href="#">registreren</a></li>
+                                <li><a>inloggen</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text float-right">
+                            <h3>South African Travels</h3>
+                            <p>South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika</p>
+                        </div>
+                    </div>
+                    <p class="copyright">South African Travels © {{\Carbon\Carbon::now()->year}}</p>
+                </div>
+            </footer>
     </div>
 </body>
 </html>
