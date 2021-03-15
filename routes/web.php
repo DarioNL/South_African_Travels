@@ -18,3 +18,12 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/bestemmingen', [App\Http\Controllers\DestinationController::class, 'index'])->name('home');
+
+Route::group(['middleware' => ['auth:web,admins']], function () {
+
+});
+
+Route::group(['middleware' => ['auth:admins']], function () {
+
+});
