@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/Airplane.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/bus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/train.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +199,8 @@
       <workItem from="1614874999967" duration="592000" />
       <workItem from="1614958899646" duration="589000" />
       <workItem from="1615322015939" duration="6097000" />
-      <workItem from="1615496124465" duration="2837000" />
+      <workItem from="1615496124465" duration="3150000" />
+      <workItem from="1615840576452" duration="2312000" />
     </task>
     <task id="LOCAL-00001" summary="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten">
       <created>1614618360170</created>
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614791424767</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="eerste versie home pagina">
+      <created>1615499860737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615499860737</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +250,7 @@
     <MESSAGE value="traveler model en migration toegevoegd&#10;alle seeders gemaakt" />
     <MESSAGE value="registreren werkt" />
     <MESSAGE value="login voor beheerders werkt" />
-    <option name="LAST_COMMIT_MESSAGE" value="login voor beheerders werkt" />
+    <MESSAGE value="eerste versie home pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="eerste versie home pagina" />
   </component>
 </project>

@@ -39,7 +39,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="/home">Home</a>
-                        <a class="nav-item nav-link" href="/destinations">bestemmingen</a>
+                        <a class="nav-item nav-link" href="/destinations">Bestemmingen</a>
                         <a class="nav-item nav-link" href="/travels">Reizen</a>
                         <!-- Authentication Links -->
 
@@ -100,27 +100,55 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <div class="footer-light">
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 float-left item">
-                            <h3>pagina's</h3>
-                            <ul>
-                                <li><a href="#">Reizen</a></li>
-                                <li><a href="#">bestemmingen</a></li>
-                                <li><a href="#">registreren</a></li>
-                                <li><a>inloggen</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 item text float-right">
-                            <h3>South African Travels</h3>
-                            <p>South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika</p>
-                        </div>
+
+        <footer class=" text-center fixed-bottom border-top  text-lg-start">
+
+            <div class="container p-4">
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">South African Travels</h5>
+
+                        <p>
+                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika
+                        </p>
                     </div>
-                    <p class="copyright">South African Travels © {{\Carbon\Carbon::now()->year}}</p>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-0">pagina's</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-dark">Home</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">bestemmingen</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Reizen</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Login</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-            </footer>
-    </div>
+
+            </div>
+
+
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © {{\Carbon\Carbon::now()->year}} Copyright:
+                <a class="text-dark">South African Travels</a>
+            </div>
+
+        </footer>
+
 </body>
 </html>
