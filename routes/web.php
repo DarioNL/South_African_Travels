@@ -17,13 +17,23 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Auth::routes();
 
+Route::get('/reizen', [App\Http\Controllers\TravelsController::class, 'index'])->name('index');
+Route::get('/reizen/{id}', [App\Http\Controllers\TravelsController::class, 'show'])->name('show');
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth:web,admin']], function () {
-
+    Route::get('/reizen/{id}/boeken', [App\Http\Controllers\TravelsController::class, 'show'])->name('show');
 });
 
 Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () {
+    Route::get('/reizen/{id}', [App\Http\Controllers\TravelsController::class, 'create'])->name('create');
+    Route::get('/bestemmingen/{id}/bijwerken', [App\Http\Controllers\DestinationController::class, 'edit'])->name('update');
+    Route::post('/reizen/toevoegen', [App\Http\Controllers\TravelsController::class, 'store'])->name('store');
+    Route::get('/reizen/{id}/verwijderen', [App\Http\Controllers\TravelsController::class, 'destroy'])->name('destroy');
+    Route::post('/reizen/{id}/wijzigen', [App\Http\Controllers\TravelsController::class, 'update'])->name('update');
+    Route::post('/reizen/{id}/verwijderen', [App\Http\Controllers\TravelsController::class, 'postDestroy'])->name('postDestroy');
     Route::get('/bestemmingen', [App\Http\Controllers\DestinationController::class, 'index'])->name('index');
     Route::get('/bestemmingen/toevoegen', [App\Http\Controllers\DestinationController::class, 'create'])->name('create');
     Route::post('/bestemmingen/toevoegen', [App\Http\Controllers\DestinationController::class, 'store'])->name('store');

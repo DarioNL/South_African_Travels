@@ -15,6 +15,9 @@ class Travel extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = 'travels';
+
     protected $fillable = [
         'start_date',
         'end_date',
@@ -45,5 +48,9 @@ class Travel extends Authenticatable
 
     public function booking(){
         return $this->hasMany(Booking::class, 'travel_id', 'id');
+    }
+
+    public function Destination(){
+        return $this->hasOne(Destination::class, 'id', 'destination_id');
     }
 }

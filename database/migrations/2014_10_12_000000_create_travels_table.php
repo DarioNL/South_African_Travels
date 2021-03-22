@@ -18,7 +18,6 @@ class CreateTravelsTable extends Migration
             $table->string('code')->unique();
             $table->timestamp('start_date');
             $table->timestamp('end_date');
-            $table->uuid('user_id');
             $table->string('type');
             $table->uuid('destination_id');
             $table->decimal('price', 9,2);

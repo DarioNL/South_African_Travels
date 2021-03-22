@@ -180,6 +180,6 @@ class DestinationController extends Controller
         }
         $destination->destroy();
 
-        return redirect('admin/betsemmingen');
+        return redirect('admin/bestemmingen');
     }
 }

@@ -45,4 +45,8 @@ class Destination extends Authenticatable
     {
         return $this->hasMany(Accommodation::class, 'destination_id', 'id');
     }
+
+    public function Travels(){
+        return $this->hasMany(Travel::class, 'destination_id', 'id');
+    }
 }
