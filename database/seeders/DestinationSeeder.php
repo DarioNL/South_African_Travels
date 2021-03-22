@@ -19,7 +19,7 @@ class DestinationSeeder extends Seeder
     {
         DB::table('destinations')->insert([
             'id' => 'a3b2c903-25d9-40a9-a8db-e2c1bfb5352d',
-            'code' => 'bloe',
+            'code' => 'BLOE',
             'location' => 'bloemfontein',
             'country' => 'Zuid-Africa',
             'province' => 'Vrijstaat',

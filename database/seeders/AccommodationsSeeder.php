@@ -18,6 +18,7 @@ class AccommodationsSeeder extends Seeder
     public function run()
     {
         DB::table('accommodations')->insert([
+            'code' => 'BlOE2637',
             'id' => 'a3s2c903-25d9-40a9-a8db-e2c1bfb5352d',
             'destination_id' => 'a3b2c903-25d9-40a9-a8db-e2c1bfb5352d',
             'type' => 'hotel',
