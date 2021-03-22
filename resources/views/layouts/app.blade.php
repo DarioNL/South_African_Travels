@@ -10,14 +10,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
+
+
+
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
+
 </head>
 <body>
     <div id="app">
@@ -39,8 +43,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="/home">Home</a>
-                        <a class="nav-item nav-link" href="/destinations">Bestemmingen</a>
-                        <a class="nav-item nav-link" href="/travels">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
+                        @endauth
+                        <a class="nav-item nav-link" href="/reizen">Reizen</a>
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -101,7 +107,7 @@
             @yield('content')
         </main>
 
-        <footer class=" text-center fixed-bottom border-top  text-lg-start">
+        <footer class=" text-center border-top  text-lg-start">
 
             <div class="container p-4">
 
@@ -128,12 +134,17 @@
                             <li>
                                 <a href="#!" class="text-dark">Reizen</a>
                             </li>
-                            <li>
-                                <a href="#!" class="text-dark">Login</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-dark">Register</a>
-                            </li>
+                            @auth('web')
+                            @elseauth('admin')
+                            @else
+                                <li>
+                                    <a href="#!" class="text-dark">Login</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-dark">Register</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
 
@@ -149,6 +160,9 @@
             </div>
 
         </footer>
-
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    @yield('javascripts')
 </body>
 </html>

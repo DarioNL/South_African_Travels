@@ -1,3 +1,13 @@
 footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
     background-color: lightgray;
+}
+
+.clickable-row,
+.clickable-row-not-last,
+.clickable-row-not-last-two {
+    cursor: pointer;
 }
