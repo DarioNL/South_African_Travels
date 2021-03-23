@@ -25,6 +25,7 @@ class Travel extends Authenticatable
         'type',
         'destination_id',
         'price',
+        'code'
     ];
 
     /**

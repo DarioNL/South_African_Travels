@@ -5,106 +5,93 @@
     <div class="card">
         <div class="card-body pt-2">
             <div class="card-title mb-5 text-muted">
-                <h3 class="float-left">Bijwerken: {{$destination->code}}</h3>
+                <h3 class="float-left">Reis bijwerken: {{$travel->code}}</h3>
                 <h4 class="float-right text-muted mr-2 mt-1">
-                    <a href="/admin/bestemmingen" class="text-muted">< terug</a>
+                    <a href="/reizen" class="text-muted">< terug</a>
                 </h4>
             </div>
             <div class="card-text">
 
-                <form action="/admin/bestemmingen/{{$destination->id}}/wijzigen" method="POST">
+                <form action="/admin/reizen/{{$travel->id}}/bijwerken" method="POST">
                     @csrf
                     <div class="row">
-
-                        <div class="col-md-6">
-                            <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Locatie')}}</label>
-                            <input type="text" autocomplete="location"
-                                   class="form-control  @error('location') is-invalid @enderror"
-                                   name="location" value="{{$destination->location}}"
+                        <div class="col-6">
+                            <label for="start_date" class="font-weight-bolder text-muted col-form-label">{{__('Start Datum')}}</label>
+                            <input type="date" autocomplete="start_date"
+                                   class="form-control  @error('start_date') is-invalid @enderror"
+                                   name="start_date" value="{{$travel->start_date}}"
                                    required autofocus>
 
 
-                            @error('location')
+                            @error('start_date')
+                            <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="col-6">
+                            <label for="end_date" class="font-weight-bolder text-muted col-form-label">{{__('Eind Datum')}}</label>
+                            <input type="date" autocomplete="end_date"
+                                   class="form-control  @error('end_date') is-invalid @enderror"
+                                   name="end_date" value="{{$travel->end_date}}"
+                                   required autofocus>
+
+
+                            @error('end_date')
                             <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
                         </div>
                     </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="country" class="font-weight-bolder text-muted col-form-label">{{__('Land')}}</label>
-                                <input type="text" autocomplete="country"
-                                       class="form-control  @error('country') is-invalid @enderror"
-                                       name="country" value="{{$destination->country}}"
-                                       required autofocus>
-
-
-                                @error('country')
-                                <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Provincie')}}</label>
-                                <input type="text" autocomplete="province"
-                                       class="form-control  @error('province') is-invalid @enderror"
-                                       name="province" value="{{$destination->province}}"
-                                       required autofocus>
-
-
-                                @error('province')
-                                <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                    <div class="row pt-3">
-                        <div class="col-12">
-                            <a class="new-accommodation" href="#">+ Voeg Een Nieuwe Accommodatie Toe</a>
-                            <table class=" border-bottom border-top order-table w-100">
-                                <tr class="border-bottom text-secondary order-table-header" style="box-shadow: none !important; font-weight: normal">
-                                    <th class="order">Aantal kamers</th>
-                                    <th class="order">Soort</th>
-                                    <th class="order">Ligging</th>
-                                </tr>
-                                <tbody class="product" id="order-table">
-                                @php($i = 0)
-                                @foreach($destination->Accommodations as $accommodation)
-                                    @php($i++)
-                                <tr id="table-rows">
-                                    <th scope="row">
-                                        <input id="chambers{{$i}}" type="number" autocomplete="chambers{{$i}}"
-                                               class="form-control product copy" min="1"
-                                               name="chambers{{$i}}" value="{{$accommodation->chambers}}"
-                                               required autofocus>
-                                    </th>
-                                    <td>
-                                        <input type="text" autocomplete="type{{$i}}"
-                                               class="form-control copy"
-                                               name="type{{$i}}" value="{{$accommodation->type}}"
-                                               required autofocus>
-                                    </td>
-                                    <td>
-                                        <input id="range{{$i}}" type="text" autocomplete="range{{$i}}"
-                                               class="form-control product copy"
-                                               name="range{{$i}}" value="{{$accommodation->range}}"
-                                               required autofocus>
-                                    </td>
-                                </tr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Locatie')}}</label>
+                            <select autocomplete="destination"
+                                   class="form-control  @error('destination') is-invalid @enderror"
+                                   name="destination"
+                                   required autofocus>
+                                @foreach(\App\Models\Destination::all() as $destination)
+                                    <option @if($destination->id = $travel->destination_id) selected @endif value="{{$destination->id}}">{{$destination->location}}</option>
                                 @endforeach
-                                </tbody>
-                            </table>
+                            </select>
+
+
+                            @error('destination')
+                            <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                        <div class="col-6">
+                            <label for="type" class="font-weight-bolder text-muted col-form-label">{{__('Soort')}}</label>
+                            <input type="text" autocomplete="type"
+                                   class="form-control  @error('type') is-invalid @enderror"
+                                   name="type" value="{{$travel->type}}"
+                                   required autofocus>
+
+
+                            @error('type')
+                            <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                         </div>
                     </div>
-                    <input type="hidden" name="total_items" id="total_items" value="{{$i}}">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="price" class="font-weight-bolder text-muted col-form-label">{{__('prijs(€)')}}</label>
+                            <input id="price" type="number" autocomplete="price"
+                                   class="form-control"
+                                   name="price" value="{{$travel->price}}"
+                                   min="0.00" step="0.01" placeholder="0.00"
+                                   required autofocus>
+                        </div>
+                    </div>
                     <div class="row pt-5">
                         <div class="col-12">
-                                <button class="btn btn-primary float-right w-25">Bijwerken</button>
+                                <button class="btn btn-primary float-right w-25">Toevoegen</button>
                         </div>
                     </div>
 

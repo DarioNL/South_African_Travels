@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Accommodation;
+use App\Models\Booking;
 use App\Models\Destination;
 use App\Models\Facility;
 use App\Models\Travel;
 use App\Models\traveler;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class TravelsController extends Controller
@@ -19,7 +22,7 @@ class TravelsController extends Controller
      */
     public function index()
     {
-        $travels = Travel::all();
+        $travels = Travel::all()->where('is_booked', '=', 0);
         return view('travels.index', compact('travels'));
     }
 
@@ -31,6 +34,55 @@ class TravelsController extends Controller
     public function create()
     {
         return view('travels.create');
+    }
+
+    public function notLoggedIn()
+    {
+        return redirect('/login');
+    }
+
+    public function book($id){
+        $travel = Travel::find($id);
+
+        if ($travel->is_booked = 0) {
+            return view('travels.users.book', compact('travel'));
+        }else{
+            return redirect('/reizen');
+        }
+    }
+
+    public function postBook(Request $request, $id){
+        $request->validate([
+           'total_items' => 'required',
+        ]);
+        for ($i = 1; $i < $request->post('total_items')+1; $i++) {
+
+            $request->validate([
+                'first_name' . $i => 'required',
+                'last_name' . $i => 'required',
+            ]);
+        }
+
+        $travel = Travel::find($id);
+
+        $booking = Booking::create([
+            'date' => Carbon::now(),
+            'user_id' => Auth::id(),
+            'travel_id' => $travel->id,
+            'price' => $travel->price,
+        ]);
+
+        for ($i = 1; $i < $request->post('total_items')+1; $i++)
+        traveler::create([
+            'first_name' => $request->post('first_name'.$i),
+            'last_name' => $request->post('last_name'.$i),
+            'booking_id' => $booking->id,
+        ]);
+
+        $travel->is_booked = 1;
+        $travel->save();
+
+        return redirect('/boekingen');
     }
 
     /**
@@ -45,29 +97,32 @@ class TravelsController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'type' => 'required',
-            'destination_id' => 'required',
+            'destination' => 'required',
+            'price' => 'required'
 
         ]);
 
-        $destination = Destination::find($request->post('destination_id'));
+        $destination = Destination::find($request->post('destination'));
 
         $code = $destination->code.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9);
         if (!Destination::all()->where('code', '=', $code)) {
-            Destination::create([
+            Travel::create([
                 'start_date' => $request->post('start_date'),
                 'end_date' => $request->post('end_date'),
                 'type' => $request->post('type'),
                 'destination_id' => $destination->id,
                 'code' => $code,
+                'price' => $request->post('price')
             ]);
         }else{
             $code = $destination->code.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9);
-            Destination::create([
+            Travel::create([
                 'start_date' => $request->post('start_date'),
                 'end_date' => $request->post('end_date'),
                 'type' => $request->post('type'),
                 'destination_id' => $destination->id,
                 'code' => $code,
+                'price' => $request->post('price')
             ]);
         }
 
@@ -100,7 +155,7 @@ class TravelsController extends Controller
     {
         $travel = Travel::find($id);
 
-        return view('travels.edit', compact('travels'));
+        return view('travels.edit', compact('travel'));
     }
 
     /**
@@ -116,7 +171,8 @@ class TravelsController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'type' => 'required',
-            'destination_id' => 'required',
+            'destination' => 'required',
+            'price' => 'required',
 
         ]);
 
@@ -126,6 +182,8 @@ class TravelsController extends Controller
             'start_date' => $request->post('start_date'),
             'end_date' => $request->post('end_date'),
             'type' => $request->post('type'),
+            'destination' => $request->post('destination'),
+            'price' => $request->post('price'),
         ]);
 
 

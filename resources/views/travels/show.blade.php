@@ -9,18 +9,20 @@
                 <h3 class="float-left">Reis: {{$travel->code}}</h3>
                 @auth('admin')
                 <div class="float-right">
-                    <a type="button" class="btn btn-primary" href="/reizen/{{$travel->id}}/bijwerken">
+                    <a type="button" class="btn btn-primary" href="/admin/reizen/{{$travel->id}}/bijwerken">
                         Wijzigen
                     </a>
 
-                    <a type="button" class="btn btn-danger" href="/reizen/{{$travel->id}}/verwijderen">
+                    <a type="button" class="btn btn-danger" href="/admin/reizen/{{$travel->id}}/verwijderen">
                         Verwijderen
                     </a>
                 </div>
                 @else
+                    <div class="float-right">
                     <a type="button" class="btn btn-primary" href="/reizen/{{$travel->id}}/boeken">
                         Boeken
                     </a>
+                    </div>
                 @endauth
             </div>
             <h4 class="float-right text-muted mr-2 mt-1">

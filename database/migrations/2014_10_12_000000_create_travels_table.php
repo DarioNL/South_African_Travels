@@ -21,6 +21,7 @@ class CreateTravelsTable extends Migration
             $table->string('type');
             $table->uuid('destination_id');
             $table->decimal('price', 9,2);
+            $table->boolean('is_booked')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

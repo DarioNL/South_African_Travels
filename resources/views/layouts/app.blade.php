@@ -47,6 +47,13 @@
                         <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
                         @endauth
                         <a class="nav-item nav-link" href="/reizen">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @elseauth('web')
+                            <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @else
+
+                        @endauth
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -128,11 +135,22 @@
                             <li>
                                 <a href="#!" class="text-dark">Home</a>
                             </li>
+                            @auth('admin')
                             <li>
-                                <a href="#!" class="text-dark">bestemmingen</a>
+                                <a href="/bestemmingen" class="text-dark">bestemmingen</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-dark">Reizen</a>
+                                <a href="/boekingen"></a>
+                            </li>
+                            @elseauth('web')
+                                <li>
+                                    <a href="/boekingen"></a>
+                                </li>
+                            @else
+
+                            @endauth
+                            <li>
+                                <a href="/reizen" class="text-dark">Reizen</a>
                             </li>
                             @auth('web')
                             @elseauth('admin')
