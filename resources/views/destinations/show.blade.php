@@ -56,7 +56,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($destination->Accommodations as $accommodation)
+                @foreach($destination->accommodations as $accommodation)
                     <tr class="clickable-row" data-href="/admin/accommodaties/{{$accommodation->id}}">
                         <td>
                             {{$accommodation->code}}

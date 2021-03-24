@@ -193,17 +193,24 @@ class TravelsController extends Controller
         return redirect('/reizen/'.$id);
     }
 
+    public function destroy($id)
+    {
+        $travel = Travel::find($id);
+
+        return view('travels.delete', compact('travel'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function postDestroy($id)
     {
         $travel = Travel::find($id);
-        $travel->destroy();
+        $travel->delete();
 
-        return redirect('/Reizen');
+        return redirect('/reizen');
     }
 }

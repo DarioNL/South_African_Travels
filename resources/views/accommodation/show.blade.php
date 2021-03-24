@@ -9,11 +9,11 @@
 
                 <h3 class="float-left">Accommodatie: {{$accommodation->code}}</h3>
                 <div class="float-right">
-                    <a type="button" class="btn btn-primary" href="/admin/accommodatie/{{$accommodation->id}}/bijwerken">
+                    <a type="button" class="btn btn-primary" href="/admin/accommodaties/{{$accommodation->id}}/bijwerken">
                         Wijzigen
                     </a>
 
-                    <a type="button" class="btn btn-danger" href="/admin/accommdatie/{{$accommodation->id}}/verwijderen">
+                    <a type="button" class="btn btn-danger" href="/admin/accommodaties/{{$accommodation->id}}/verwijderen">
                         Verwijderen
                     </a>
                 </div>

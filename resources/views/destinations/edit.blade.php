@@ -74,7 +74,30 @@
                                 </tr>
                                 <tbody class="product" id="order-table">
                                 @php($i = 0)
-                                @foreach($destination->Accommodations as $accommodation)
+                                @if($destination->Accommodations)
+                                    @php($i = 1)
+                                    <tr id="table-rows">
+                                        <th scope="row">
+                                            <input id="chambers1" type="number" autocomplete="chambers1"
+                                                   class="form-control product copy" min="1"
+                                                   name="chambers1" value="{{old('chambers1')}}"
+                                                   required autofocus>
+                                        </th>
+                                        <td>
+                                            <input type="text" autocomplete="type1"
+                                                   class="form-control copy"
+                                                   name="type1" value="{{old('type1')}}"
+                                                   required autofocus>
+                                        </td>
+                                        <td>
+                                            <input id="range1" type="text" autocomplete="range1"
+                                                   class="form-control product copy"
+                                                   name="range1" value="{{old('range1')}}"
+                                                   required autofocus>
+                                        </td>
+                                    </tr>
+                                @else
+                                @foreach($destination->accommodations as $accommodation)
                                     @php($i++)
                                 <tr id="table-rows">
                                     <th scope="row">
@@ -97,6 +120,7 @@
                                     </td>
                                 </tr>
                                 @endforeach
+                                @endif
                                 </tbody>
                             </table>
                         </div>

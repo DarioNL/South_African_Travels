@@ -149,6 +149,25 @@ class DestinationController extends Controller
             'province' => $request->post('province'),
         ]);
 
+        if ($request->post('total_items') > $destination->accommodations->count()) {
+            if ($destination->accommodations->count()) {
+                $i = 1;
+            }else{
+                $i = 0;
+            }
+            $code = $destination->code.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9);
+            for ($i=$i; $i < $request->post('total_items');) {
+                $i++;
+                Accommodation::create([
+                    'destination_id' => $id,
+                    'code' => $code,
+                    'type' => $request->post('type' . $i),
+                    'chambers' => $request->post('chambers' . $i),
+                    'range' => $request->post('range' . $i),
+                ]);
+            }
+        }
+
         $i = 0;
         foreach($destination->accommodations as $accommodation) {
             $i++;
@@ -165,20 +184,28 @@ class DestinationController extends Controller
         return redirect('/admin/bestemmingen/'.$id);
     }
 
+    public function destroy($id)
+    {
+        $destination = Destination::find($id);
+
+        return view('destinations.delete', compact('destination'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function postDestroy($id)
     {
         $destination = Destination::find($id);
 
-        Foreach($destination->Faclities as $faclity){
-            $faclity->destroy();
+        Foreach($destination->Travels as $travel){
+            $travel->delete();
         }
-        $destination->destroy();
+
+        $destination->delete();
 
         return redirect('admin/bestemmingen');
     }
