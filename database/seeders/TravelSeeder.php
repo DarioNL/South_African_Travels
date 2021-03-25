@@ -27,6 +27,7 @@ class TravelSeeder extends Seeder
             'price' => 79.53,
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today(),
+            'is_booked' => 1,
         ]);
     }
 }

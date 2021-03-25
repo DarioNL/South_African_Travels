@@ -58,6 +58,8 @@ Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () 
     Route::get('/accommodaties/{id}/verwijderen', [App\Http\Controllers\AccommodationController::class, 'destroy'])->name('destroy');
     Route::post('/accommodaties/{id}/wijzigen', [App\Http\Controllers\AccommodationController::class, 'update'])->name('update');
     Route::post('/accommodaties/{id}/verwijderen', [App\Http\Controllers\AccommodationController::class, 'postDestroy'])->name('postDestroy');
-    Route::get('/boekingen{id}/betaal', [App\Http\Controllers\BookingsController::class, 'isPayed'])->name('isPayed');
-    Route::post('/boekingen{id}/betaal', [App\Http\Controllers\BookingsController::class, 'postIsPayed'])->name('postIsPayed');
+    Route::get('/boekingen/{id}/betaald', [App\Http\Controllers\BookingsController::class, 'isPayed'])->name('isPayed');
+    Route::post('/boekingen/{id}/betaald', [App\Http\Controllers\BookingsController::class, 'postIsPayed'])->name('postIsPayed');
+    Route::get('/boekingen/{id}/betaald/annuleer', [App\Http\Controllers\BookingsController::class, 'isNotPayed'])->name('isNotPayed');
+    Route::post('/boekingen/{id}/betaald/annuleer', [App\Http\Controllers\BookingsController::class, 'postIsNotPayed'])->name('postIsNotPayed');
 });

@@ -41,10 +41,12 @@ class TravelsController extends Controller
         return redirect('/login');
     }
 
+
+
     public function book($id){
         $travel = Travel::find($id);
 
-        if ($travel->is_booked = 0) {
+        if ($travel->is_booked == 0) {
             return view('travels.users.book', compact('travel'));
         }else{
             return redirect('/reizen');

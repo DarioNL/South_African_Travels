@@ -74,7 +74,8 @@
                                 </tr>
                                 <tbody class="product" id="order-table">
                                 @php($i = 0)
-                                @if($destination->Accommodations)
+                                @php($accommodations = $destination->accommodations->count())
+                                @if($accommodations == 0)
                                     @php($i = 1)
                                     <tr id="table-rows">
                                         <th scope="row">
@@ -96,7 +97,7 @@
                                                    required autofocus>
                                         </td>
                                     </tr>
-                                @else
+                                @endif
                                 @foreach($destination->accommodations as $accommodation)
                                     @php($i++)
                                 <tr id="table-rows">
@@ -120,7 +121,6 @@
                                     </td>
                                 </tr>
                                 @endforeach
-                                @endif
                                 </tbody>
                             </table>
                         </div>

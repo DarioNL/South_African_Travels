@@ -71,9 +71,10 @@
                                     <th class="order">Naam</th>
                                 </tr>
                                 <tbody class="product" id="order-table">
-                                @php($i = 0)
                                 @php($accommodations = $accommodation->facilities->count())
-                                @if($accommodations = 0)
+                                @php($i = 0)
+                                @if($accommodations == 0)
+                                    @php($i = 1)
                                     <tr id="table-rows">
                                         <th scope="row">
                                             <input id="name1" type="text" autocomplete="name1"
@@ -83,7 +84,6 @@
                                         </th>
                                     </tr>
                                 @endif
-
                                     @foreach($accommodation->Facilities as $facility)
                                         @php($i++)
                                         <tr id="table-rows">

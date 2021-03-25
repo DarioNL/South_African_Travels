@@ -13,9 +13,15 @@
                 <h3 class="float-left">Boeking: {{$booking->travel->code}}</h3>
                 <div class="float-right">
                     @auth('admin')
-                    <a type="button" class="btn btn-primary" href="/admin/boekingen/{{$booking->id}}/isPayed">
-                        Markeer al betaald
-                    </a>
+                        @if($booking->is_payed)
+                            <a type="button" class="btn btn-danger" href="/admin/boekingen/{{$booking->id}}/betaald/annuleer">
+                                Markeer als niet betaald
+                            </a>
+                        @else
+                            <a type="button" class="btn btn-primary" href="/admin/boekingen/{{$booking->id}}/betaald">
+                                Markeer als betaald
+                            </a>
+                        @endif
                     @endauth
                     <a type="button" class="btn btn-danger" href="/boekingen/{{$booking->id}}/annuleer">
                         annuleer

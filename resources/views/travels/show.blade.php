@@ -46,6 +46,10 @@
                         <th>bestemming:</th>
                         <td class="border-left">{{$travel->Destination->location}}</td>
                     </tr>
+                    <tr>
+                        <th>prijs:</th>
+                        <td class="border-left">{{$travel->price}}</td>
+                    </tr>
                 </table>
 
             </div>

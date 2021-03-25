@@ -31,6 +31,7 @@
                     <th>bestemming</th>
                     <th>provincie</th>
                     <th>land</th>
+                    <th>Prijs</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -56,6 +57,9 @@
                         </td>
                         <td>
                             {{$travel->Destination->country}}
+                        </td>
+                        <td>
+                            {{$travel->price}}
                         </td>
                     </tr>
                 @endforeach

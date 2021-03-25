@@ -52,17 +52,43 @@ class BookingsController extends Controller
         return view('bookings.cancel', compact('booking'));
     }
 
-    public function isPayed()
+    public function isPayed($id)
     {
-        return view('bookings.payed');
+        $booking = Booking::find($id);
+        if ($booking->is_payed == 0) {
+            return view('bookings.pay', compact('booking'));
+        }else{
+            return back();
+        }
     }
 
     public function postIsPayed($id){
         $booking = Booking::find($id);
 
         $booking->is_payed = 1;
+        $booking->save();
 
-        return redirect('/bookings');
+        return redirect('/boekingen/'.$booking->id);
+    }
+
+    public function isNotPayed($id)
+    {
+        $booking = Booking::find($id);
+        if ($booking->is_payed == 1) {
+
+            return view('bookings.unpay', compact('booking'));
+        }else{
+            return back();
+        }
+    }
+
+    public function postIsNotPayed($id){
+        $booking = Booking::find($id);
+
+        $booking->is_payed = 0;
+        $booking->save();
+
+        return redirect('/boekingen/'.$booking->id);
     }
 
     public function postCancel($id){
