@@ -24,7 +24,7 @@ class AccommodationController extends Controller
     {
        $accommodation = Accommodation::find($id);
 
-       return view('accomodation.show', compact('accommodation'));
+       return view('accommodation.show', compact('accommodation'));
     }
 
     /**
@@ -37,7 +37,7 @@ class AccommodationController extends Controller
     {
         $accommodation = Accommodation::find($id);
 
-        return view('accomodation.edit', compact('accommodation'));
+        return view('accommodation.facilities.edit', compact('accommodation'));
     }
 
     /**
@@ -49,7 +49,50 @@ class AccommodationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'chambers' => 'required',
+            'type' => 'required',
+            'range' => 'required',
+        ]);
+
+
+        for ($i = 1; $i < $request->post('total_items')+1; $i++) {
+
+            $request->validate([
+                'name' . $i => 'required',
+            ]);
+        }
+
         $accommodation = Accommodation::find($id);
+
+        $accommodation->update([
+            'chambers' => $request->post('chambers'),
+            'type' => $request->post('type'),
+            'range' => $request->post('range'),
+        ]);
+
+        $i = 0;
+        foreach($accommodation->Facilities as $facility) {
+            $i++;
+            $facility->update([
+                'name' => $request->post('name'.$i),
+            ]);
+        }
+        if (!$accommodation->Facilities) {
+            $facilities_number = 0;
+        }else{
+            $facilities_number = $accommodation->Facilities->count();
+        }
+        if ($request->post('total_items') > $facilities_number) {
+            $i = 1;
+            for ($i = 1; $i < $request->post('total_items') + 1; $i++)
+                Facility::create([
+                    'name' => $request->post('name' . $i),
+                    'accommodation_id' => $id,
+                ]);
+        }
+
+        return redirect('/admin/accommodaties/'.$id);
     }
 
     /**
@@ -58,8 +101,22 @@ class AccommodationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id){
+        $accommodation = Accommodation::find($id);
+
+        return view('accommodation.delete', compact('accommodation'));
+    }
+
+    public function postDestroy($id)
     {
+        $accommodation = Accommodation::find($id);
+
+        foreach ($accommodation->Facilities as $facility){
+            $facility->delete();
+        }
+
         Accommodation::destroy($id);
+
+        return redirect('/admin/bestemmingen');
     }
 }

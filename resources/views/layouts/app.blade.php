@@ -47,6 +47,13 @@
                         <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
                         @endauth
                         <a class="nav-item nav-link" href="/reizen">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @elseauth('web')
+                            <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @else
+
+                        @endauth
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -117,7 +124,7 @@
                         <h5 class="text-uppercase">South African Travels</h5>
 
                         <p>
-                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika
+                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika.
                         </p>
                     </div>
 
@@ -128,11 +135,22 @@
                             <li>
                                 <a href="#!" class="text-dark">Home</a>
                             </li>
+                            @auth('admin')
                             <li>
-                                <a href="#!" class="text-dark">bestemmingen</a>
+                                <a href="/bestemmingen" class="text-dark">bestemmingen</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-dark">Reizen</a>
+                                <a href="/boekingen"></a>
+                            </li>
+                            @elseauth('web')
+                                <li>
+                                    <a href="/boekingen"></a>
+                                </li>
+                            @else
+
+                            @endauth
+                            <li>
+                                <a href="/reizen" class="text-dark">Reizen</a>
                             </li>
                             @auth('web')
                             @elseauth('admin')
