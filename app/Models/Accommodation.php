@@ -20,6 +20,7 @@ class Accommodation extends Authenticatable
         'type',
         'chambers',
         'range',
+        'code',
     ];
 
     /**
@@ -41,12 +42,12 @@ class Accommodation extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function destination()
+    public function Destination()
     {
-        return $this->hasOne(Destination::class ,'id', 'invoice_id');
+        return $this->hasOne(Destination::class ,'id', 'destination_id');
     }
 
-    public function facilities(){
-        return $this->hasMany(Facility::class, 'id', 'Accommodation_id');
+    public function Facilities(){
+        return $this->hasMany(Facility::class, 'accommodation_id', 'id');
     }
 }

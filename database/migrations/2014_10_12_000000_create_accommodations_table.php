@@ -15,6 +15,7 @@ class CreateAccommodationsTable extends Migration
     {
         Schema::create('accommodations', function (Blueprint $table) {
             $table->uuid('id');
+            $table->string('code');
             $table->uuid('destination_id');
             $table->string('type');
             $table->integer('chambers');

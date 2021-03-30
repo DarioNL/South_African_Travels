@@ -17,7 +17,8 @@ class CreateBookingsTable extends Migration
             $table->uuid('id');
             $table->timestamp('date');
             $table->uuid('user_id');
-            $table->uuid('travel_id')->unique();
+            $table->uuid('travel_id');
+            $table->boolean('is_payed')->default(0);
             $table->decimal('price', 9,2);
             $table->timestamps();
             $table->softDeletes();

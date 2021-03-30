@@ -10005,5 +10005,13 @@ h3 {
   }
 }
 footer {
+  bottom: 0;
+  width: 100%;
   background-color: lightgray;
+}
+
+.clickable-row,
+.clickable-row-not-last,
+.clickable-row-not-last-two {
+  cursor: pointer;
 }

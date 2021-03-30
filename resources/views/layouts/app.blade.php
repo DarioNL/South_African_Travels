@@ -10,14 +10,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
+
+
+
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
+
 </head>
 <body>
     <div id="app">
@@ -39,8 +43,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="/home">Home</a>
-                        <a class="nav-item nav-link" href="/destinations">Bestemmingen</a>
-                        <a class="nav-item nav-link" href="/travels">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
+                        @endauth
+                        <a class="nav-item nav-link" href="/reizen">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @elseauth('web')
+                            <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @else
+
+                        @endauth
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -101,7 +114,7 @@
             @yield('content')
         </main>
 
-        <footer class=" text-center fixed-bottom border-top  text-lg-start">
+        <footer class=" text-center border-top  text-lg-start">
 
             <div class="container p-4">
 
@@ -111,7 +124,7 @@
                         <h5 class="text-uppercase">South African Travels</h5>
 
                         <p>
-                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika
+                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika.
                         </p>
                     </div>
 
@@ -122,18 +135,34 @@
                             <li>
                                 <a href="#!" class="text-dark">Home</a>
                             </li>
+                            @auth('admin')
                             <li>
-                                <a href="#!" class="text-dark">bestemmingen</a>
+                                <a href="/bestemmingen" class="text-dark">bestemmingen</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-dark">Reizen</a>
+                                <a href="/boekingen"></a>
                             </li>
+                            @elseauth('web')
+                                <li>
+                                    <a href="/boekingen"></a>
+                                </li>
+                            @else
+
+                            @endauth
                             <li>
-                                <a href="#!" class="text-dark">Login</a>
+                                <a href="/reizen" class="text-dark">Reizen</a>
                             </li>
-                            <li>
-                                <a href="#!" class="text-dark">Register</a>
-                            </li>
+                            @auth('web')
+                            @elseauth('admin')
+                            @else
+                                <li>
+                                    <a href="#!" class="text-dark">Login</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-dark">Register</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
 
@@ -149,6 +178,9 @@
             </div>
 
         </footer>
-
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    @yield('javascripts')
 </body>
 </html>

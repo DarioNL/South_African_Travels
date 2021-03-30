@@ -50,6 +50,6 @@ class Booking extends Authenticatable
     }
 
     public function travelers(){
-        return $this->hasOne(Travel::class, 'booking_id', 'id');
+        return $this->hasMany(traveler::class, 'booking_id', 'id');
     }
 }
