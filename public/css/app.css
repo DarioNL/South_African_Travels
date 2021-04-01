@@ -10004,10 +10004,15 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.page-container {
+  background: lightgray;
+}
+
 footer {
-  bottom: 0;
+  position: absolute;
+  bottom: 0vh;
   width: 100%;
-  background-color: lightgray;
+  background: lightgray;
 }
 
 .clickable-row,

@@ -115,9 +115,11 @@
             @yield('content')
         </main>
 
-        <footer class=" text-center border-top  text-lg-start">
+        <footer class=" text-center border-top   text-lg-start">
 
-            <div class="container p-4">
+            <div class="page-container p-4">
+
+                <div class="content-wrap"></div>
 
                 <div class="row">
 

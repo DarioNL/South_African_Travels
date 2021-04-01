@@ -1,10 +1,15 @@
-footer{
-    bottom: 0;
-    width: 100%;
-    background-color: lightgray;
+.page-container {
+    background: lightgray;
 }
 
-.clickable-row,
+footer {
+    position: absolute;
+    bottom:  0vh;
+    width: 100%;
+    background: lightgray;
+}
+
+    .clickable-row,
 .clickable-row-not-last,
 .clickable-row-not-last-two {
     cursor: pointer;

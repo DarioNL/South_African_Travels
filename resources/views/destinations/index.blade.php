@@ -40,10 +40,10 @@
                             {{$destination->location}}
                         </td>
                         <td>
-                            {{$destination->country}}
+                            {{$destination->Province->Country->name}}
                         </td>
                         <td>
-                            {{$destination->province}}
+                            {{$destination->Province->name}}
                         </td>
                     </tr>
                 @endforeach
