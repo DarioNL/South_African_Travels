@@ -44,6 +44,7 @@
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="/home">Home</a>
                         @auth('admin')
+                            <a class="nav-item nav-link" href="/admin/landen">Landen</a>
                         <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
                         @endauth
                         <a class="nav-item nav-link" href="/reizen">Reizen</a>
@@ -136,8 +137,11 @@
                                 <a href="#!" class="text-dark">Home</a>
                             </li>
                             @auth('admin')
+                                <li>
+                                    <a href="admin/landen" class="text-dark">landen</a>
+                                </li>
                             <li>
-                                <a href="/bestemmingen" class="text-dark">bestemmingen</a>
+                                <a href="admin/bestemmingen" class="text-dark">bestemmingen</a>
                             </li>
                             <li>
                                 <a href="/boekingen"></a>

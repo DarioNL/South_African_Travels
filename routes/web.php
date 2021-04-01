@@ -38,6 +38,15 @@ Route::group(['middleware' => ['auth:web,admin']], function () {
 });
 
 Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () {
+
+    Route::get('/landen/toevoegen', [App\Http\Controllers\CountriesController::class, 'create'])->name('create');
+    Route::get('/landen/{id}', [App\Http\Controllers\CountriesController::class, 'show'])->name('show');
+    Route::get('/landen/{id}/bijwerken', [App\Http\Controllers\CountriesController::class, 'edit'])->name('update');
+    Route::post('/landen/toevoegen', [App\Http\Controllers\CountriesController::class, 'store'])->name('store');
+    Route::get('/landen/{id}/verwijderen', [App\Http\Controllers\CountriesController::class, 'destroy'])->name('destroy');
+    Route::post('/landen/{id}/wijzigen', [App\Http\Controllers\CountriesController::class, 'update'])->name('update');
+    Route::post('/landen/{id}/verwijderen', [App\Http\Controllers\CountriesController::class, 'postDestroy'])->name('postDestroy');
+    Route::get('/landen', [App\Http\Controllers\CountriesController::class, 'index'])->name('index');
     Route::get('/reizen/{id}', [App\Http\Controllers\TravelsController::class, 'create'])->name('create');
     Route::get('/bestemmingen/{id}/bijwerken', [App\Http\Controllers\DestinationController::class, 'edit'])->name('update');
     Route::post('/reizen/toevoegen', [App\Http\Controllers\TravelsController::class, 'store'])->name('store');

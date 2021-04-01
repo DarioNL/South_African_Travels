@@ -45,37 +45,31 @@
                             @enderror
                         </div>
                     </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="country" class="font-weight-bolder text-muted col-form-label">{{__('Land')}}</label>
-                                <input type="text" autocomplete="country"
-                                       class="form-control  @error('country') is-invalid @enderror"
-                                       name="country" value="{{old('country')}}"
-                                       required autofocus>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Provincie')}}</label>
+                            <a  href="/admin/landen">+ Voeg Een Nieuwe Provincie Toe</a>
+                            <select name="province" id="cars" class="form-control  @error('destination') is-invalid @enderror"
+                                    name="destination"
+                                    required autofocus>
+                                @foreach($countries as $country)
+                                <optgroup label="Provincies uit {{$country->name}}">
+                                    @foreach($country->Provinces as $province)
+                                        <option value="{{$province->id}}">{{$province->name}}</option>
+                                    @endforeach
+                                </optgroup>
+                                @endforeach
+                            </select>
 
 
-                                @error('country')
-                                <span class="invalid-feedback d-block" role="alert">
+                            @error('province')
+                            <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Provincie')}}</label>
-                                <input type="text" autocomplete="province"
-                                       class="form-control  @error('province') is-invalid @enderror"
-                                       name="province" value="{{old('province')}}"
-                                       required autofocus>
-
-
-                                @error('province')
-                                <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            @enderror
                         </div>
+                    </div>
 
                     <div class="row pt-3">
                         <div class="col-12">
@@ -114,7 +108,7 @@
                     <input type="hidden" name="total_items" id="total_items" value="1">
                     <div class="row pt-5">
                         <div class="col-12">
-                                <button class="btn btn-primary float-right w-25">Toevoegen</button>
+                            <button class="btn btn-primary float-right w-25">Toevoegen</button>
                         </div>
                     </div>
 
