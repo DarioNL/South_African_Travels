@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Accommodation;
+use App\Models\Country;
 use App\Models\Destination;
 use App\Models\Facility;
+use App\Models\Province;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -28,7 +30,9 @@ class DestinationController extends Controller
      */
     public function create()
     {
-        return view('destinations.create');
+        $countries = Country::all();
+
+        return view('destinations.create', compact('countries'));
     }
 
     /**
@@ -41,7 +45,6 @@ class DestinationController extends Controller
     {
         $request->validate([
             'location' => 'required',
-            'country' => 'required',
             'province' => 'required',
             'code' => [
                 Rule::unique('destinations','code'),
@@ -60,8 +63,7 @@ class DestinationController extends Controller
 
         $destination = Destination::create([
             'location' => $request->post('location'),
-            'country' => $request->post('country'),
-            'province' => $request->post('province'),
+            'province_id' => $request->post('province'),
             'code' => $request->post('code'),
         ]);
 
@@ -112,8 +114,9 @@ class DestinationController extends Controller
     public function edit($id)
     {
         $destination = Destination::find($id);
+        $countries = Country::all();
 
-        return view('destinations.edit', compact('destination'));
+        return view('destinations.edit', compact('destination', 'countries'));
     }
 
     /**
@@ -127,7 +130,6 @@ class DestinationController extends Controller
     {
         $request->validate([
             'location' => 'required',
-            'country' => 'required',
             'province' => 'required',
         ]);
 
@@ -145,8 +147,7 @@ class DestinationController extends Controller
 
         $destination->update([
             'location' => $request->post('location'),
-            'country' => $request->post('country'),
-            'province' => $request->post('province'),
+            'province_id' => $request->post('province'),
         ]);
 
         if ($request->post('total_items') > $destination->accommodations->count()) {

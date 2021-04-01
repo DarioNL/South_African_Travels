@@ -5,18 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/bookings/unpay.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CountriesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Province.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CountriesFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_30_100727_create_countries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_30_100727_create_provinces_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/CountriesSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ProvinceSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/countries/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/countries/delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/countries/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/countries/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/countries/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SouthAfricanTravels.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SouthAfricanTravels.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodation/facilities/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodation/facilities/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bookings/pay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bookings/pay.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bookings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bookings/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DestinationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Destination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Destination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_destinations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_destinations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/destinations/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/destinations/delete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/destinations/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/destinations/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/travels/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travels/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development-bestemmingen" />
+        <entry key="$PROJECT_DIR$" value="development-reizen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,7 +95,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
@@ -112,7 +127,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
@@ -162,6 +176,8 @@
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/webpatser/laravel-uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p9vitH4R32S9BsrLUczntZq9Bx" />
@@ -177,24 +193,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/bookings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\app\Models" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\database\seeders" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\database\migrations" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\bookings" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\travels" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accommodation" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accomodation\facilities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\countries" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accomodation" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations\facilities" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\public\img" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +238,10 @@
       <workItem from="1616358319346" duration="310000" />
       <workItem from="1616358859606" duration="6508000" />
       <workItem from="1616423808895" duration="22737000" />
-      <workItem from="1616677514057" duration="3638000" />
+      <workItem from="1616677514057" duration="4278000" />
+      <workItem from="1617091565833" duration="4661000" />
+      <workItem from="1617198153807" duration="6189000" />
+      <workItem from="1617267773576" duration="5785000" />
     </task>
     <task id="LOCAL-00001" summary="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten">
       <created>1614618360170</created>
@@ -287,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616625493589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;pay en unpay functie toegevoegd aan bookings">
+      <created>1616689893985</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616689893985</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +331,7 @@
     <MESSAGE value="begin bestemmingen" />
     <MESSAGE value="code systeem toegevoegd aan accommodaties&#10;alle pagina's voor de bestemmingen gemaakt&#10;de besetmming controller uitgewerkt&#10;Jquery datatables geïntegreerd.&#10;accommodaties pagina's gemaakt&#10;accommodatie en bestemming routes gemaakt" />
     <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
-    <option name="LAST_COMMIT_MESSAGE" value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
+    <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;pay en unpay functie toegevoegd aan bookings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;pay en unpay functie toegevoegd aan bookings" />
   </component>
 </project>

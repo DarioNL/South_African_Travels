@@ -9,12 +9,12 @@
     <div class="card table-container align-items-center w-100">
         <div class="w-100 border-bottom p-2">
             <div class="float-left">
-                <h3 class="float-left pt-2">Reizen</h3>
+                <h3 class="float-left pt-2">Landen</h3>
             </div>
             @auth('admin')
             <div class="float-right">
-                <a type="button" class="btn btn-primary" href="/admin/reizen/toevoegen">
-                    + Voeg Nieuwe reizen Toe
+                <a type="button" class="btn btn-primary" href="/admin/landen/toevoegen">
+                    + Voeg Nieuw Land Toe
                 </a>
             </div>
             @endauth
@@ -25,41 +25,17 @@
                 <thead>
                 <tr>
                     <th>Code</th>
-                    <th>Start Datum</th>
-                    <th>Eind Datum</th>
-                    <th>type</th>
-                    <th>bestemming</th>
-                    <th>provincie</th>
-                    <th>land</th>
-                    <th>Prijs</th>
+                    <th>Naam</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($travels as $travel)
-                    <tr class="clickable-row" data-href="/reizen/{{$travel->id}}">
+                @foreach($countries as $country)
+                    <tr class="clickable-row" data-href="/admin/landen/{{$country->id}}">
                         <td>
-                            {{$travel->code}}
+                            {{$country->code}}
                         </td>
                         <td>
-                            {{$travel->start_date}}
-                        </td>
-                        <td>
-                            {{$travel->end_date}}
-                        </td>
-                        <td>
-                            {{$travel->type}}
-                        </td>
-                        <td>
-                            {{$travel->Destination->location}}
-                        </td>
-                        <td>
-                            {{$travel->Destination->province}}
-                        </td>
-                        <td>
-                            {{$travel->Destination->country}}
-                        </td>
-                        <td>
-                            {{$travel->price}}
+                            {{$country->name}}
                         </td>
                     </tr>
                 @endforeach

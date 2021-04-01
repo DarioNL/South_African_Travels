@@ -30,38 +30,30 @@
                                     </span>
                             @enderror
                         </div>
-                    </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="country" class="font-weight-bolder text-muted col-form-label">{{__('Land')}}</label>
-                                <input type="text" autocomplete="country"
-                                       class="form-control  @error('country') is-invalid @enderror"
-                                       name="country" value="{{$destination->country}}"
-                                       required autofocus>
+
+                        <div class="col-md-6">
+                            <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Provincie')}}</label>
+                            <a  href="/admin/landen">+ Voeg Een Nieuwe Provincie Toe</a>
+                            <select name="province" id="cars" class="form-control  @error('destination') is-invalid @enderror"
+                                    name="destination"
+                                    required autofocus>
+                                @foreach($countries as $country)
+                                    <optgroup label="Provincies uit {{$country->name}}">
+                                        @foreach($country->Provinces as $province)
+                                            <option @if($destination->Province->id == $province->id) selected @endif value="{{$province->id}}">{{$province->name}}</option>
+                                        @endforeach
+                                    </optgroup>
+                                @endforeach
+                            </select>
 
 
-                                @error('country')
-                                <span class="invalid-feedback d-block" role="alert">
+                            @error('province')
+                            <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="" class="font-weight-bolder text-muted col-form-label">{{__('Provincie')}}</label>
-                                <input type="text" autocomplete="province"
-                                       class="form-control  @error('province') is-invalid @enderror"
-                                       name="province" value="{{$destination->province}}"
-                                       required autofocus>
-
-
-                                @error('province')
-                                <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            @enderror
                         </div>
+                    </div>
 
                     <div class="row pt-3">
                         <div class="col-12">
@@ -100,26 +92,26 @@
                                 @endif
                                 @foreach($destination->accommodations as $accommodation)
                                     @php($i++)
-                                <tr id="table-rows">
-                                    <th scope="row">
-                                        <input id="chambers{{$i}}" type="number" autocomplete="chambers{{$i}}"
-                                               class="form-control product copy" min="1"
-                                               name="chambers{{$i}}" value="{{$accommodation->chambers}}"
-                                               required autofocus>
-                                    </th>
-                                    <td>
-                                        <input type="text" autocomplete="type{{$i}}"
-                                               class="form-control copy"
-                                               name="type{{$i}}" value="{{$accommodation->type}}"
-                                               required autofocus>
-                                    </td>
-                                    <td>
-                                        <input id="range{{$i}}" type="text" autocomplete="range{{$i}}"
-                                               class="form-control product copy"
-                                               name="range{{$i}}" value="{{$accommodation->range}}"
-                                               required autofocus>
-                                    </td>
-                                </tr>
+                                    <tr id="table-rows">
+                                        <th scope="row">
+                                            <input id="chambers{{$i}}" type="number" autocomplete="chambers{{$i}}"
+                                                   class="form-control product copy" min="1"
+                                                   name="chambers{{$i}}" value="{{$accommodation->chambers}}"
+                                                   required autofocus>
+                                        </th>
+                                        <td>
+                                            <input type="text" autocomplete="type{{$i}}"
+                                                   class="form-control copy"
+                                                   name="type{{$i}}" value="{{$accommodation->type}}"
+                                                   required autofocus>
+                                        </td>
+                                        <td>
+                                            <input id="range{{$i}}" type="text" autocomplete="range{{$i}}"
+                                                   class="form-control product copy"
+                                                   name="range{{$i}}" value="{{$accommodation->range}}"
+                                                   required autofocus>
+                                        </td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -128,7 +120,7 @@
                     <input type="hidden" name="total_items" id="total_items" value="{{$i}}">
                     <div class="row pt-5">
                         <div class="col-12">
-                                <button class="btn btn-primary float-right w-25">Bijwerken</button>
+                            <button class="btn btn-primary float-right w-25">Bijwerken</button>
                         </div>
                     </div>
 

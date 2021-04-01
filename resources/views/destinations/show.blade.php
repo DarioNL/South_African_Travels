@@ -32,11 +32,11 @@
                     </tr>
                     <tr>
                         <th>land:</th>
-                        <td class="border-left">{{$destination->country}}</td>
+                        <td class="border-left">{{$destination->Province->name}}</td>
                     </tr>
                     <tr>
                         <th>provincie:</th>
-                        <td class="border-left">{{$destination->province}}</td>
+                        <td class="border-left">{{$destination->Province->Country->name}}</td>
                     </tr>
                 </table>
 
@@ -77,7 +77,7 @@
         </div>
     </div>
 
-        @endsection
+@endsection
 
 @section('javascripts')
     <script type="text/javascript" defer charset="utf8"
@@ -90,4 +90,3 @@
         });
     </script>
 @endsection
-
