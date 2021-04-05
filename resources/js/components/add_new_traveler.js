@@ -1,20 +1,20 @@
 $(document).ready(function () {
-    $('.new-accommodation').click(function () {
-        if (document.getElementsByClassName('new-accommodation')) {
-            itemsID = document.getElementById("total_items")
-            var total_items = parseInt(itemsID.value);
+    $('.new-traveler').click(function () {
+       var maxTravelers = document.getElementById('max_travelers')
+        if (itemsID.value < maxTravelers.value) {
+            console.log('ik werk')
             addItem();
         }
     });
 });
-
-
+var itemsID = document.getElementById("total_travelers")
+var total_items = parseInt(itemsID.value);
 
 function addItem() {
     tableID = document.getElementById("order-table");
 
     total_items++
-    document.getElementById("total_items").value = total_items;
+    document.getElementById("total_travelers").value = total_items;
     var newFields = document.getElementById('table-rows').cloneNode(true);
     newFields.id = '';
 

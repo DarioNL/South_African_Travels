@@ -53,10 +53,10 @@
                             {{$travel->Destination->location}}
                         </td>
                         <td>
-                            {{$travel->Destination->province}}
+                            {{$travel->Destination->province->name}}
                         </td>
                         <td>
-                            {{$travel->Destination->country}}
+                            {{$travel->Destination->province->Country->name}}
                         </td>
                         <td>
                             {{$travel->price}}

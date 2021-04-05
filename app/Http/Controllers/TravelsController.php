@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use PhpParser\Node\Stmt\If_;
 
 class TravelsController extends Controller
 {
@@ -55,36 +56,43 @@ class TravelsController extends Controller
 
     public function postBook(Request $request, $id){
         $request->validate([
-           'total_items' => 'required',
+           'total_travelers' => 'required',
         ]);
-        for ($i = 1; $i < $request->post('total_items')+1; $i++) {
 
-            $request->validate([
-                'first_name' . $i => 'required',
-                'last_name' . $i => 'required',
-            ]);
-        }
 
         $travel = Travel::find($id);
 
-        $booking = Booking::create([
-            'date' => Carbon::now(),
-            'user_id' => Auth::id(),
-            'travel_id' => $travel->id,
-            'price' => $travel->price,
-        ]);
+        if($request->post('total_travelers') <= $travel->Destination->Accommodations->sum('chambers')) {
+            for ($i = 1; $i < $request->post('total_travelers') + 1; $i++) {
 
-        for ($i = 1; $i < $request->post('total_items')+1; $i++)
-        traveler::create([
-            'first_name' => $request->post('first_name'.$i),
-            'last_name' => $request->post('last_name'.$i),
-            'booking_id' => $booking->id,
-        ]);
+                $request->validate([
+                    'first_name' . $i => 'required',
+                    'last_name' . $i => 'required',
+                ]);
+            }
 
-        $travel->is_booked = 1;
-        $travel->save();
 
-        return redirect('/boekingen');
+            $booking = Booking::create([
+                'date' => Carbon::now(),
+                'user_id' => Auth::id(),
+                'travel_id' => $travel->id,
+                'price' => $travel->price,
+            ]);
+
+            for ($i = 1; $i < $request->post('total_travelers') + 1; $i++)
+                traveler::create([
+                    'first_name' => $request->post('first_name' . $i),
+                    'last_name' => $request->post('last_name' . $i),
+                    'booking_id' => $booking->id,
+                ]);
+
+            $travel->is_booked = 1;
+            $travel->save();
+
+            return redirect('/boekingen');
+        }else{
+            return back();
+        }
     }
 
     /**
@@ -144,7 +152,9 @@ class TravelsController extends Controller
     {
        $travel = Travel::find($id);
 
-       return view('travels.show', compact('travel'));
+       $max_travelers = $travel->Destination->Accommodations->sum('chambers');
+
+       return view('travels.show', compact('travel', 'max_travelers'));
     }
 
     /**
