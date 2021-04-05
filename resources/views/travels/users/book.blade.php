@@ -18,7 +18,7 @@
 
                     <div class="row pt-3">
                         <div class="col-12">
-                            <a class="new-accommodation" href="#">+ Voeg Een Nieuwe Klant Toe</a>
+                            <a class="new-traveler" href="#">+ Voeg Een Nieuwe Klant Toe</a>
                             <table class=" border-bottom border-top order-table w-100">
                                 <tr class="border-bottom text-secondary order-table-header" style="box-shadow: none !important; font-weight: normal">
                                     <th class="order">Voornaam</th>
@@ -43,7 +43,8 @@
                             </table>
                         </div>
                     </div>
-                    <input type="hidden" name="total_items" id="total_items" value="1">
+                    <input type="hidden" name="total_travelers" id="total_travelers" max="{{$travel->Destination->Accommodations->sum('chambers')}}" value="1">
+                    <input type="hidden" name="max_travelers" id="max_travelers" max="{{$travel->Destination->Accommodations->sum('chambers')}}" value="{{$travel->Destination->Accommodations->sum('chambers')}}" min="{{$travel->Destination->Accommodations->sum('chambers')}}" readonly>
                     <div class="row pt-5">
                         <div class="col-12">
                                 <button class="btn btn-primary float-right w-25">Toevoegen</button>

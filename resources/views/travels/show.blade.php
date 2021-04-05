@@ -50,6 +50,10 @@
                         <th>prijs:</th>
                         <td class="border-left">{{$travel->price}}</td>
                     </tr>
+                    <tr>
+                        <th>maximum aantal reizigers:</th>
+                        <td class="border-left">{{$max_travelers}}</td>
+                    </tr>
                 </table>
 
             </div>
