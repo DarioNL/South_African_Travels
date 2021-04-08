@@ -21,6 +21,7 @@
             <h4 class="float-right text-muted mr-2 mt-1">
                 <a href="/admin/bestemmingen/{{$accommodation->Destination->id}}" class="text-muted">< terug</a>
             </h4>
+            <div class="text-center mb-4">@if($accommodation->photo) <img src="{{asset($accommodation->photo)}}" class="" alt="Foto van de accommodatie" > @endif</div>
             <div class="card-text">
                 <table class="table border" style="width:100%">
                     <tr>
@@ -37,7 +38,7 @@
                     </tr>
                     <tr>
                         <th>Faciliteiten:</th>
-                        <td class="border-left">@if($accommodation->Facilities) @foreach($accommodation->Facilities as $facility){{$facility->name}}, @endforeach @else geen @endif</td>
+                        <td class="border-left">@if($accommodation->Facilities) @foreach($accommodation->Facilities as $facility) {{$facility->name}}, @endforeach @else geen @endif</td>
                     </tr>
                 </table>
 

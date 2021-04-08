@@ -28,6 +28,8 @@
             <h4 class="float-right text-muted mr-2 mt-1">
                 <a href="/reizen" class="text-muted">< terug</a>
             </h4>
+
+            <div class="text-center mb-4"> @if($travel->destination->photo) <img src="{{asset($travel->destination->photo)}}" class="" alt="Foto van de Locatie" > @endif </div>
             <div class="card-text">
                 <table class="table border" style="width:100%">
                     <tr>
@@ -56,11 +58,57 @@
                     </tr>
                 </table>
 
-            </div>
+                <div>
+                    <h4>In {{$travel->Destination->location}} @if($travel->Destination->Accommodations->count() > 1 or $travel->Destination->Accommodations->count() == 0) zijn @else is @endif {{$travel->Destination->Accommodations->count()}} @if($travel->Destination->Accommodations->count() > 1 or $travel->Destination->Accommodations->count() == 0) accommodaties. @else acocomodatie. @endif</h4>
+                </div>
 
-    </div>
+                <table id="datatable" class="table">
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Soort</th>
+                        <th>aantal kamers</th>
+                        <th>ligging</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($travel->Destination->accommodations as $accommodation)
+                        <tr class="clickable-row" data-href="/accommodaties/{{$accommodation->id}}">
+                            <td>
+                                {{$accommodation->code}}
+                            </td>
+                            <td>
+                                {{$accommodation->type}}
+                            </td>
+                            <td>
+                                {{$accommodation->chambers}}
+                            </td>
+                            <td>
+                                {{$accommodation->range}}
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
 
         @endsection
+
+        @section('javascripts')
+            <script type="text/javascript" defer charset="utf8"
+                    src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#datatable').DataTable({
+                        "lengthChange": false
+                    });
+                });
+            </script>
+@endsection
 
 
 

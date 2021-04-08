@@ -21,6 +21,7 @@ class DestinationSeeder extends Seeder
             'id' => 'a3b2c903-25d9-40a9-a8db-e2c1bfb5352d',
             'code' => 'BLOE',
             'location' => 'bloemfontein',
+            'photo' => 'images/690063964.jpg',
             'province_id' => 'si39c903-55d9-10a9-a8db-e2c1bfb5352d',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today(),

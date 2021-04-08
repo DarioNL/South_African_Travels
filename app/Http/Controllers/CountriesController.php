@@ -45,6 +45,7 @@ class CountriesController extends Controller
 
         ]);
 
+
         for ($i = 1; $i < $request->post('total_items')+1; $i++) {
 
             $request->validate([
@@ -52,9 +53,21 @@ class CountriesController extends Controller
             ]);
         }
 
+
+
+        if ($request->file('flag')) {
+            $logoUpload = $request->file('flag');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+        }
+
+
+
         $country = Country::create([
             'name' => $request->post('name'),
             'code' => $request->post('code'),
+            'flag' => 'images/'.$logoName,
         ]);
 
         for ($i = 1; $i < $request->post('total_items')+1; $i++) {
@@ -114,9 +127,17 @@ class CountriesController extends Controller
 
         $country = Country::find($id);
 
+        if ($request->file('flag')) {
+            $logoUpload = $request->file('flag');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+        }
+
         $country->update([
             'name' => $request->post('name'),
             'code' => $request->post('code'),
+            'flag' => 'images/'.$logoName,
         ]);
 
         for ($i = 1; $i < $request->post('total_items')+1; $i++) {

@@ -18,6 +18,7 @@ class CreateAccommodationsTable extends Migration
             $table->string('code');
             $table->uuid('destination_id');
             $table->string('type');
+            $table->string('photo')->nullable();
             $table->integer('chambers');
             $table->string('range');
             $table->timestamps();

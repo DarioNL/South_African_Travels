@@ -1,17 +1,18 @@
 $(document).ready(function () {
     $('.new-traveler').click(function () {
        var maxTravelers = document.getElementById('max_travelers')
-        if (itemsID.value < maxTravelers.value) {
-            console.log('ik werk')
+        var itemsID = document.getElementById("total_travelers")
+        if (maxTravelers.value >  itemsID.value){
             addItem();
         }
     });
 });
-var itemsID = document.getElementById("total_travelers")
-var total_items = parseInt(itemsID.value);
 
 function addItem() {
     tableID = document.getElementById("order-table");
+
+    var itemsID = document.getElementById("total_travelers")
+    var total_items = parseInt(itemsID.value);
 
     total_items++
     document.getElementById("total_travelers").value = total_items;

@@ -22,6 +22,7 @@ class AccommodationsSeeder extends Seeder
             'id' => 'a3s2c903-25d9-40a9-a8db-e2c1bfb5352d',
             'destination_id' => 'a3b2c903-25d9-40a9-a8db-e2c1bfb5352d',
             'type' => 'hotel',
+            'photo' => 'images/386786287.jpg',
             'chambers' => 4,
             'range' => 'zee',
             'created_at' => Carbon::today(),

@@ -21,6 +21,7 @@ class Accommodation extends Authenticatable
         'chambers',
         'range',
         'code',
+        'photo',
     ];
 
     /**

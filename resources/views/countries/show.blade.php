@@ -28,7 +28,7 @@
                 <table class="table border" style="width:100%">
                     <tr>
                         <th>Naam:</th>
-                        <td class="border-left w-75">{{$country->name}}</td>
+                        <td class="border-left w-75">  @if($country->flag) <img src="{{asset($country->flag)}}" class="country-flag-img " alt="user logo">@endif {{$country->name}}</td>
                     </tr>
                 </table>
 

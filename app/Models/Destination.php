@@ -19,6 +19,7 @@ class Destination extends Authenticatable
         'code',
         'location',
         'province_id',
+        'photo',
     ];
 
     /**

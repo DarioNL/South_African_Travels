@@ -56,7 +56,7 @@
                             {{$travel->Destination->province->name}}
                         </td>
                         <td>
-                            {{$travel->Destination->province->Country->name}}
+                            @if($travel->Destination->province->Country->flag) <img src="{{asset($travel->Destination->province->Country->flag)}}" class="country-flag-img " alt="user logo">@endif {{$travel->Destination->province->Country->name}}
                         </td>
                         <td>
                             {{$travel->price}}

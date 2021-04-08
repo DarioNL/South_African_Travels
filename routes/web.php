@@ -34,6 +34,7 @@ Route::group(['middleware' => ['auth:web,admin']], function () {
     Route::get('/boekingen/{id}', [App\Http\Controllers\BookingsController::class, 'show'])->name('show');
     Route::get('/boekingen/{id}/annuleer', [App\Http\Controllers\BookingsController::class, 'cancel'])->name('cancel');
     Route::post('/boekingen/{id}/annuleer', [App\Http\Controllers\BookingsController::class, 'postCancel'])->name('postCancel');
+    Route::get('/accommodaties/{id}', [App\Http\Controllers\AccommodationController::class, 'show'])->name('show');
 
 });
 
@@ -62,7 +63,6 @@ Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin'], function () 
     Route::get('/bestemmingen/{id}/verwijderen', [App\Http\Controllers\DestinationController::class, 'destroy'])->name('destroy');
     Route::post('/bestemmingen/{id}/wijzigen', [App\Http\Controllers\DestinationController::class, 'update'])->name('update');
     Route::post('/bestemmingen/{id}/verwijderen', [App\Http\Controllers\DestinationController::class, 'postDestroy'])->name('postDestroy');
-    Route::get('/accommodaties/{id}', [App\Http\Controllers\AccommodationController::class, 'show'])->name('show');
     Route::get('/accommodaties/{id}/bijwerken', [App\Http\Controllers\AccommodationController::class, 'edit'])->name('edit');
     Route::get('/accommodaties/{id}/verwijderen', [App\Http\Controllers\AccommodationController::class, 'destroy'])->name('destroy');
     Route::post('/accommodaties/{id}/wijzigen', [App\Http\Controllers\AccommodationController::class, 'update'])->name('update');

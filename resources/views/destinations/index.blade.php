@@ -40,7 +40,7 @@
                             {{$destination->location}}
                         </td>
                         <td>
-                            {{$destination->Province->Country->name}}
+                            @if($destination->Province->Country->flag) <img src="{{asset($destination->Province->Country->flag)}}" class="country-flag-img " alt="user logo"> @endif {{$destination->Province->Country->name}}
                         </td>
                         <td>
                             {{$destination->Province->name}}

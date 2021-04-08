@@ -19,6 +19,7 @@ class CountriesSeeder extends Seeder
             'id' => 'b3b9c903-55d9-10a9-a8db-e2c1bfb5352d',
             'code' => 'RSA',
             'name' => 'Zuid-Afrika',
+            'flag' => 'images/562912699.png',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today(),
         ]);
