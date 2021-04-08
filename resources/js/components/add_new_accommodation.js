@@ -1,18 +1,17 @@
 $(document).ready(function () {
     $('.new-accommodation').click(function () {
-        if (document.getElementsByClassName('new-accommodation')) {
-            itemsID = document.getElementById("total_items")
-            var total_items = parseInt(itemsID.value);
-            addItem();
-        }
+        addItem();
     });
 });
-
 
 
 function addItem() {
     tableID = document.getElementById("order-table");
 
+    itemsID = document.getElementById("total_items")
+    var total_items = parseInt(itemsID.value);
+
+    console.log(itemsID)
     total_items++
     document.getElementById("total_items").value = total_items;
     var newFields = document.getElementById('table-rows').cloneNode(true);

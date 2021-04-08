@@ -25,7 +25,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     South African Travels
@@ -115,7 +115,8 @@
             @yield('content')
         </main>
 
-        <footer class=" text-center border-top   text-lg-start">
+        @php($action = substr((Illuminate\Support\Facades\Route::currentRouteAction()), strpos(Illuminate\Support\Facades\Route::currentRouteAction(), "@") ))
+        <footer @if($action != '@show' or Illuminate\Support\Facades\Route::currentRouteAction() == 'App\Http\Controllers\CountriesController@show') style="position: absolute" @endif class=" text-center border-top   text-lg-start">
 
             <div class="page-container p-4">
 
@@ -124,15 +125,15 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">South African Travels</h5>
+                        <h5 class="text-uppercase text-white">South African Travels</h5>
 
-                        <p>
+                        <p class="text-light">
                             South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika.
                         </p>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-0">pagina's</h5>
+                        <h5 class="text-uppercase text-white mb-0">pagina's</h5>
 
                         <ul class="list-unstyled">
                             <li>
@@ -178,9 +179,9 @@
 
 
 
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="text-center navbar-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © {{\Carbon\Carbon::now()->year}} Copyright:
-                <a class="text-dark">South African Travels</a>
+                <a class="text-light">South African Travels</a>
             </div>
 
         </footer>

@@ -35,7 +35,7 @@
                             {{$country->code}}
                         </td>
                         <td>
-                            {{$country->name}}
+                           @if($country->flag) <img src="{{asset($country->flag)}}" class="country-flag-img " alt="user logo">@endif {{$country->name}}
                         </td>
                     </tr>
                 @endforeach

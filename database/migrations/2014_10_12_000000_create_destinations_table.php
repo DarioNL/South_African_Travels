@@ -17,6 +17,7 @@ class CreateDestinationsTable extends Migration
             $table->uuid('id');
             $table->string('code');
             $table->string('location');
+            $table->string('photo')->nullable();
             $table->uuid('province_id');
             $table->timestamps();
             $table->softDeletes();

@@ -114,6 +114,7 @@ class TravelsController extends Controller
 
         $destination = Destination::find($request->post('destination'));
 
+
         $code = $destination->code.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9);
         if (!Destination::all()->where('code', '=', $code)) {
             Travel::create([
@@ -135,6 +136,7 @@ class TravelsController extends Controller
                 'price' => $request->post('price')
             ]);
         }
+
 
 
 

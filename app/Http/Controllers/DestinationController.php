@@ -52,6 +52,9 @@ class DestinationController extends Controller
             ],
         ]);
 
+
+
+
         for ($i = 1; $i < $request->post('total_items')+1; $i++) {
 
             $request->validate([
@@ -61,10 +64,18 @@ class DestinationController extends Controller
             ]);
         }
 
+        if ($request->file('photo')) {
+            $logoUpload = $request->file('photo');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+        }
+
         $destination = Destination::create([
             'location' => $request->post('location'),
             'province_id' => $request->post('province'),
             'code' => $request->post('code'),
+            'photo' => 'images/'.$logoName,
         ]);
 
         for ($i = 1; $i < $request->post('total_items')+1; $i++) {
@@ -145,9 +156,17 @@ class DestinationController extends Controller
 
         $destination = Destination::find($id);
 
+        if ($request->file('photo')) {
+            $logoUpload = $request->file('photo');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+        }
+
         $destination->update([
             'location' => $request->post('location'),
             'province_id' => $request->post('province'),
+            'photo' => 'images'.$logoName,
         ]);
 
         if ($request->post('total_items') > $destination->accommodations->count()) {

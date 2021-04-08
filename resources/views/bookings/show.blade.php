@@ -31,6 +31,7 @@
             <h4 class="float-right text-muted mr-2 mt-1">
                 <a href="/bookingen" class="text-muted">< terug</a>
             </h4>
+            <div class="text-center mb-4">@if($booking->travel->destination->photo) <img src="{{asset($booking->travel->destination->photo)}}" class="" alt="Foto van de Locatie" > @endif</div>
             <div class="card-text">
                 <table class="table border" style="width:100%">
                     <tr>

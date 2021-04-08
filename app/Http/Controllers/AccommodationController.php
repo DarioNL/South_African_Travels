@@ -65,11 +65,29 @@ class AccommodationController extends Controller
 
         $accommodation = Accommodation::find($id);
 
+        if ($request->file('photo')) {
+            $logoUpload = $request->file('photo');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+        }
+
         $accommodation->update([
             'chambers' => $request->post('chambers'),
             'type' => $request->post('type'),
             'range' => $request->post('range'),
+            'photo' => 'images/'.$logoName,
         ]);
+
+        if ($request->post('flag')) {
+            $logoUpload = $request->file('logo');
+            $logoName = time() . '.' . $logoUpload->getClientOriginalExtension();
+            $logoPath = public_path('/images/');
+            $logoUpload->move($logoPath, $logoName);
+
+            $accommodation->photo = $logoPath.$logoName;
+            $accommodation->save();
+        }
 
         $i = 0;
         foreach($accommodation->Facilities as $facility) {

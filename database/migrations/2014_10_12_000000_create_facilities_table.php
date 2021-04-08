@@ -17,6 +17,7 @@ class CreateFacilitiesTable extends Migration
             $table->uuid('id');
             $table->uuid('accommodation_id');
             $table->string('name');
+            $table->string('photo')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

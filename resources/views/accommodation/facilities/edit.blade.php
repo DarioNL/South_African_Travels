@@ -12,7 +12,7 @@
             </div>
             <div class="card-text">
 
-                <form action="/admin/accommodaties/{{$accommodation->id}}/wijzigen" method="POST">
+                <form enctype="multipart/form-data" action="/admin/accommodaties/{{$accommodation->id}}/wijzigen" method="POST">
                     @csrf
                     <div class="row">
 
@@ -25,6 +25,18 @@
 
 
                             @error('type')
+                            <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="photo" class="font-weight-bolder text-muted col-form-label">{{__('Foto')}}</label>
+                            <input id="photo" type="file" accept="image/*" class="form-control-file" name="photo" required>
+
+
+                            @error('photo')
                             <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

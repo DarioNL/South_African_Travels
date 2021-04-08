@@ -24,7 +24,10 @@
             <h4 class="float-right text-muted mr-2 mt-1">
                 <a href="/admin/bestemmingen" class="text-muted">< terug</a>
             </h4>
+
+            <div class="text-center mb-4">@if($destination->photo) <img src="{{asset($destination->photo)}}" class="" alt="Foto van de Locatie" > @endif</div>
             <div class="card-text">
+
                 <table class="table border" style="width:100%">
                     <tr>
                         <th>locatie:</th>
@@ -32,11 +35,11 @@
                     </tr>
                     <tr>
                         <th>land:</th>
-                        <td class="border-left">{{$destination->Province->name}}</td>
+                        <td class="border-left">@if($destination->Province->Country->flag) <img src="{{asset($destination->Province->Country->flag)}}" class="country-flag-img " alt="user logo"> @endif {{$destination->Province->Country->name}}</td>
                     </tr>
                     <tr>
                         <th>provincie:</th>
-                        <td class="border-left">{{$destination->Province->Country->name}}</td>
+                        <td class="border-left">{{$destination->Province->name}}</td>
                     </tr>
                 </table>
 
@@ -57,7 +60,7 @@
                 </thead>
                 <tbody>
                 @foreach($destination->accommodations as $accommodation)
-                    <tr class="clickable-row" data-href="/admin/accommodaties/{{$accommodation->id}}">
+                    <tr class="clickable-row" data-href="/accommodaties/{{$accommodation->id}}">
                         <td>
                             {{$accommodation->code}}
                         </td>
@@ -76,6 +79,9 @@
             </table>
         </div>
     </div>
+
+
+
 
 @endsection
 

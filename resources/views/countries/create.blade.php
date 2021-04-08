@@ -12,7 +12,7 @@
             </div>
             <div class="card-text">
 
-                <form action="/admin/landen/toevoegen" method="POST">
+                <form action="/admin/landen/toevoegen" enctype="multipart/form-data" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-6">
@@ -39,6 +39,19 @@
 
 
                             @error('name')
+                            <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="flag" class="font-weight-bolder text-muted col-form-label">{{__('Vlag')}}</label>
+                            <input id="flag" type="file" accept="image/*" class="form-control-file" name="flag" required>
+
+
+                            @error('flag')
                             <span class="invalid-feedback d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
