@@ -18,8 +18,8 @@ class FacilitySeeder extends Seeder
     public function run()
     {
         DB::table('facilities')->insert([
-            'id' => 'c3s2c903-25d9-40s9-a8db-e2c1bfb5352d',
-            'accommodation_id' => 'a3s2c903-25d9-40a9-a8db-e2c1bfb5352d',
+            'id' => 'b4b2c903-55d9-10a9-a8db-e2c1bfb5351d',
+            'accommodation_id' => 'b4b2c903-55d9-10a9-a8db-e2c1bfb5352d',
             'name' => 'zwembad',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today(),

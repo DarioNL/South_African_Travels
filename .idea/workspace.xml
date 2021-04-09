@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AccommodationsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AccommodationsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/BookingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/BookingSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/TravelerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TravelerSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617989028103</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="database type verandert">
+      <created>1617993763169</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617993763169</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

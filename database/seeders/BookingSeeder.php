@@ -18,7 +18,7 @@ class BookingSeeder extends Seeder
     public function run()
     {
         DB::table('bookings')->insert([
-            'id' => 'a3b2c903-25d9-40z9-a8db-e2c1bfb5352d',
+            'id' => 'b1b2c903-55d9-40a9-a8db-e2c1bfb5352d',
             'date' => Carbon::today(),
             'user_id' => 'b3b2c903-55d9-40a9-a8db-e2c1bfb5352d',
             'travel_id' => 'b3b2c903-25d9-40a9-a8db-e2c1bfb5352d',

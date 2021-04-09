@@ -20,7 +20,7 @@ class TravelerSeeder extends Seeder
             'id' => 'b3b9c903-55d9-40k9-a8db-e2c1bfb5352d',
             'first_name' => 'John',
             'last_name' => 'Doe',
-            'booking_id' => 'a3b2c903-25d9-40z9-a8db-e2c1bfb5352d',
+            'booking_id' => 'b1b2c903-55d9-40a9-a8db-e2c1bfb5352d',
             'created_at' => Carbon::today(),
             'updated_at' => Carbon::today(),
         ]);
