@@ -18,6 +18,7 @@ class Facility extends Authenticatable
     protected $fillable = [
         'accommodation_id',
         'name',
+        'photo',
     ];
 
     /**

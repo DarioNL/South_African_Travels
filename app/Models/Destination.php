@@ -18,8 +18,8 @@ class Destination extends Authenticatable
     protected $fillable = [
         'code',
         'location',
-        'country',
-        'province',
+        'province_id',
+        'photo',
     ];
 
     /**
@@ -44,5 +44,13 @@ class Destination extends Authenticatable
     public function accommodations()
     {
         return $this->hasMany(Accommodation::class, 'destination_id', 'id');
+    }
+
+    public function Travels(){
+        return $this->hasMany(Travel::class, 'destination_id', 'id');
+    }
+
+    Public function Province(){
+        return $this->hasOne(Province::class, 'id', 'province_id');
     }
 }

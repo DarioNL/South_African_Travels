@@ -18,6 +18,7 @@ class CreateTravelersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->uuid('booking_id');
+            $table->uuid('travel_id');
             $table->timestamps();
             $table->softDeletes();
         });

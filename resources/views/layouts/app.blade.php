@@ -10,18 +10,22 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
+
+
+
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     South African Travels
@@ -39,8 +43,18 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-item nav-link" href="/home">Home</a>
-                        <a class="nav-item nav-link" href="/destinations">Bestemmingen</a>
-                        <a class="nav-item nav-link" href="/travels">Reizen</a>
+                        @auth('admin')
+                            <a class="nav-item nav-link" href="/admin/landen">Landen</a>
+                        <a class="nav-item nav-link" href="/admin/bestemmingen">Bestemmingen</a>
+                        @endauth
+                        <a class="nav-item nav-link" href="/reizen">Reizen</a>
+                        @auth('admin')
+                        <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @elseauth('web')
+                            <a class="nav-item nav-link" href="/boekingen">Boekingen</a>
+                        @else
+
+                        @endauth
                         <!-- Authentication Links -->
 
                         @auth('web')
@@ -101,39 +115,61 @@
             @yield('content')
         </main>
 
-        <footer class=" text-center fixed-bottom border-top  text-lg-start">
+        @php($action = substr((Illuminate\Support\Facades\Route::currentRouteAction()), strpos(Illuminate\Support\Facades\Route::currentRouteAction(), "@") ))
+        <footer @if($action != '@show' or Illuminate\Support\Facades\Route::currentRouteAction() == 'App\Http\Controllers\CountriesController@show') style="position: absolute" @endif class=" text-center border-top   text-lg-start">
 
-            <div class="container p-4">
+            <div class="page-container p-4">
+
+                <div class="content-wrap"></div>
 
                 <div class="row">
 
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">South African Travels</h5>
+                        <h5 class="text-uppercase text-white">South African Travels</h5>
 
-                        <p>
-                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika
+                        <p class="text-light">
+                            South African travels is een reisbureau, dat gespecialiseerd is in luxe reizen naar Zuid-Afrika. Het bedrijf heeft zijn succes vooral te danken aan een persoonlijke aanpak en aan de kennis die zij hebben van de mogelijkheden van reizen binnen Zuid-Afrika.
                         </p>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-0">pagina's</h5>
+                        <h5 class="text-uppercase text-white mb-0">pagina's</h5>
 
                         <ul class="list-unstyled">
                             <li>
                                 <a href="#!" class="text-dark">Home</a>
                             </li>
+                            @auth('admin')
+                                <li>
+                                    <a href="admin/landen" class="text-dark">landen</a>
+                                </li>
                             <li>
-                                <a href="#!" class="text-dark">bestemmingen</a>
+                                <a href="admin/bestemmingen" class="text-dark">bestemmingen</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-dark">Reizen</a>
+                                <a href="/boekingen"></a>
                             </li>
+                            @elseauth('web')
+                                <li>
+                                    <a href="/boekingen"></a>
+                                </li>
+                            @else
+
+                            @endauth
                             <li>
-                                <a href="#!" class="text-dark">Login</a>
+                                <a href="/reizen" class="text-dark">Reizen</a>
                             </li>
-                            <li>
-                                <a href="#!" class="text-dark">Register</a>
-                            </li>
+                            @auth('web')
+                            @elseauth('admin')
+                            @else
+                                <li>
+                                    <a href="#!" class="text-dark">Login</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-dark">Register</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
 
@@ -143,12 +179,15 @@
 
 
 
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="text-center navbar-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © {{\Carbon\Carbon::now()->year}} Copyright:
-                <a class="text-dark">South African Travels</a>
+                <a class="text-light">South African Travels</a>
             </div>
 
         </footer>
-
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    @yield('javascripts')
 </body>
 </html>

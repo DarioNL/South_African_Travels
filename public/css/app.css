@@ -10004,6 +10004,31 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.page-container, .login-header {
+  background: black;
+}
+
 footer {
-  background-color: lightgray;
+  bottom: 0vh;
+  width: 100%;
+  background: #f09800;
+}
+
+.clickable-row,
+.clickable-row-not-last,
+.clickable-row-not-last-two {
+  cursor: pointer;
+}
+
+nav, .login-body {
+  background: #f09800;
+}
+
+.country-flag-img {
+  max-width: 34px;
+  margin-right: 10px;
+}
+
+nav {
+  font-size: 1.2rem;
 }
