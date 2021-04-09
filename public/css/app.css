@@ -10028,3 +10028,7 @@ nav, .login-body {
   max-width: 34px;
   margin-right: 10px;
 }
+
+nav {
+  font-size: 1.2rem;
+}

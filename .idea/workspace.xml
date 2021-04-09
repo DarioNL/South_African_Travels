@@ -34,31 +34,10 @@
       <change beforePath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/Airplane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/Airplane.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/Logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bus.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/train.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/train.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/add_new_accommodation.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/add_new_accommodation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/add_new_traveler.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/add_new_traveler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodation/facilities/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodation/facilities/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bookings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bookings/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/countries/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/countries/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/countries/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/countries/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/countries/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/countries/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/countries/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/countries/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/destinations/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/destinations/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/destinations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/destinations/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travels/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travels/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="development-bestemmingen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -218,23 +197,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/bookings" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\public\img" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\img" />
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\js\components" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\bookings" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\travels" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accommodation" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accomodation\facilities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\public\img" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\accomodation" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations\facilities" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\resources\views\destinations" />
+      <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\public\img" />
       <recent name="C:\Users\Ponzo\Desktop\werk\South_African_Travels\app\Models" />
     </key>
   </component>
@@ -264,11 +243,6 @@
       <workItem from="1616358859606" duration="6508000" />
       <workItem from="1616423808895" duration="22737000" />
       <workItem from="1616677514057" duration="3638000" />
-      <workItem from="1617619634049" duration="4762000" />
-      <workItem from="1617695823174" duration="7738000" />
-      <workItem from="1617886873587" duration="106000" />
-      <workItem from="1617887234898" duration="596000" />
-      <workItem from="1617887982239" duration="14830000" />
     </task>
     <task id="LOCAL-00001" summary="Ontwikkelomgeving gemaakt&#10;Alle Models en migrations gemaakt&#10;begonnen met de seeders en factories&#10;login werkt voor klanten">
       <created>1614618360170</created>
@@ -333,21 +307,7 @@
       <option name="project" value="LOCAL" />
       <updated>1616625493589</updated>
     </task>
-    <task id="LOCAL-00010" summary="model aangepast">
-      <created>1617297129916</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1617297129916</updated>
-    </task>
-    <task id="LOCAL-00011" summary="functie toegevoegd die kijkt naar het aantal kamer op de bestemming.">
-      <created>1617638021491</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1617638021491</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,8 +325,6 @@
     <MESSAGE value="begin bestemmingen" />
     <MESSAGE value="code systeem toegevoegd aan accommodaties&#10;alle pagina's voor de bestemmingen gemaakt&#10;de besetmming controller uitgewerkt&#10;Jquery datatables geïntegreerd.&#10;accommodaties pagina's gemaakt&#10;accommodatie en bestemming routes gemaakt" />
     <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
-    <MESSAGE value="model aangepast" />
-    <MESSAGE value="functie toegevoegd die kijkt naar het aantal kamer op de bestemming." />
-    <option name="LAST_COMMIT_MESSAGE" value="functie toegevoegd die kijkt naar het aantal kamer op de bestemming." />
+    <option name="LAST_COMMIT_MESSAGE" value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
   </component>
 </project>
