@@ -110,7 +110,7 @@ class AccommodationController extends Controller
                 ]);
         }
 
-        return redirect('/admin/accommodaties/'.$id);
+        return redirect('/accommodaties/'.$id);
     }
 
     /**

@@ -4,40 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="Je kan nu een foto van de locatie, vlag van het land en de foto van accommodatie zien.&#10;Fout in de add_new_accommodation.js en add_new_traveler.js javascript componenten verbeterd.">
-      <change afterPath="$PROJECT_DIR$/public/images/1617904348.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617904622.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617904646.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617910770.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617910991.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617911224.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1617911619.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/386786287.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/562912699.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/678687392.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/690063964.jpg" afterDir="false" />
+    <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DestinationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Accommodation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Accommodation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Destination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Destination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Facility.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Facility.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_accommodations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_accommodations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_destinations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_destinations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_facilities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_facilities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_30_100727_create_countries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_30_100727_create_countries_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AccommodationsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AccommodationsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CountriesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CountriesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DestinationSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FacilitySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/destinations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/destinations/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Travel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Travel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/traveler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/traveler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_02_145939_create_travelers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_02_145939_create_travelers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/travels/users/book.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/users/book.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616625493589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="text nav menu groter maken.">
+      <created>1617974737627</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617974737627</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +309,7 @@
     <MESSAGE value="begin bestemmingen" />
     <MESSAGE value="code systeem toegevoegd aan accommodaties&#10;alle pagina's voor de bestemmingen gemaakt&#10;de besetmming controller uitgewerkt&#10;Jquery datatables geïntegreerd.&#10;accommodaties pagina's gemaakt&#10;accommodatie en bestemming routes gemaakt" />
     <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
-    <option name="LAST_COMMIT_MESSAGE" value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
+    <MESSAGE value="text nav menu groter maken." />
+    <option name="LAST_COMMIT_MESSAGE" value="text nav menu groter maken." />
   </component>
 </project>

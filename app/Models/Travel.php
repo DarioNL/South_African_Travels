@@ -47,7 +47,7 @@ class Travel extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function booking(){
+    public function Bookings(){
         return $this->hasMany(Booking::class, 'travel_id', 'id');
     }
 

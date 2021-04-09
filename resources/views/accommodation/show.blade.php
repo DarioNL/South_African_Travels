@@ -8,15 +8,17 @@
             <div class="card-title mb-5 text-muted">
 
                 <h3 class="float-left">Accommodatie: {{$accommodation->code}}</h3>
-                <div class="float-right">
-                    <a type="button" class="btn btn-primary" href="/admin/accommodaties/{{$accommodation->id}}/bijwerken">
-                        Wijzigen
-                    </a>
+                @auth('admin')
+                    <div class="float-right">
+                        <a type="button" class="btn btn-primary" href="/admin/accommodaties/{{$accommodation->id}}/bijwerken">
+                            Wijzigen
+                        </a>
 
-                    <a type="button" class="btn btn-danger" href="/admin/accommodaties/{{$accommodation->id}}/verwijderen">
-                        Verwijderen
-                    </a>
-                </div>
+                        <a type="button" class="btn btn-danger" href="/admin/accommodaties/{{$accommodation->id}}/verwijderen">
+                            Verwijderen
+                        </a>
+                    </div>
+                @endauth
             </div>
             <h4 class="float-right text-muted mr-2 mt-1">
                 <a href="/admin/bestemmingen/{{$accommodation->Destination->id}}" class="text-muted">< terug</a>

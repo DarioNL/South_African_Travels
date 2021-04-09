@@ -19,6 +19,7 @@ class traveler extends Model
         'last_name',
         'booking_id',
         'price',
+        'travel_id'
     ];
 
 

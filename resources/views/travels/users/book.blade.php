@@ -11,7 +11,7 @@
                 </h4>
             </div>
             <div class="card-text">
-
+                <h3>Er @if($max_travelers == 1) is @else zijn @endif {{$max_travelers}} @if($max_travelers == 1) kamer @else kamers @endif beschikbaar in {{$travel->Destination->location}}. </h3>
                 <form action="/reizen/{{$travel->id}}/boeken" method="POST">
                     @csrf
 
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <input type="hidden" name="total_travelers" id="total_travelers" max="{{$travel->Destination->Accommodations->sum('chambers')}}" value="1">
-                    <input type="hidden" name="max_travelers" id="max_travelers" max="{{$travel->Destination->Accommodations->sum('chambers')}}" value="{{$travel->Destination->Accommodations->sum('chambers')}}" min="{{$travel->Destination->Accommodations->sum('chambers')}}" readonly>
+                    <input type="hidden" name="max_travelers" id="max_travelers" max="{{$max_travelers}}" value="{{$max_travelers}}" min="{{$max_travelers}}" readonly>
                     <div class="row pt-5">
                         <div class="col-12">
                                 <button class="btn btn-primary float-right w-25">Toevoegen</button>

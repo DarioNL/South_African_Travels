@@ -48,7 +48,9 @@ class TravelsController extends Controller
         $travel = Travel::find($id);
 
         if ($travel->is_booked == 0) {
-            return view('travels.users.book', compact('travel'));
+            $travelers = traveler::all()->where('travel_id', '=', $travel->id);
+            $max_travelers = $travel->Destination->Accommodations->sum('chambers') - $travelers->count();
+            return view('travels.users.book', compact('travel', 'max_travelers'));
         }else{
             return redirect('/reizen');
         }
@@ -62,7 +64,9 @@ class TravelsController extends Controller
 
         $travel = Travel::find($id);
 
-        if($request->post('total_travelers') <= $travel->Destination->Accommodations->sum('chambers')) {
+        $travelers = traveler::all()->where('travel_id', '=', $travel->id);
+
+        if($request->post('total_travelers') <= $travel->Destination->Accommodations->sum('chambers') - $travelers->count()) {
             for ($i = 1; $i < $request->post('total_travelers') + 1; $i++) {
 
                 $request->validate([
@@ -84,10 +88,16 @@ class TravelsController extends Controller
                     'first_name' => $request->post('first_name' . $i),
                     'last_name' => $request->post('last_name' . $i),
                     'booking_id' => $booking->id,
+                    'travel_id' => $travel->id,
                 ]);
 
-            $travel->is_booked = 1;
-            $travel->save();
+            $travelers = traveler::all()->where('travel_id', '=', $travel->id);
+
+
+            if ($travelers->count() == $travel->Destination->Accommodations->sum('chambers')) {
+                $travel->is_booked = 1;
+                $travel->save();
+            }
 
             return redirect('/boekingen');
         }else{
