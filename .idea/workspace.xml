@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617982446853</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="database type verandert">
+      <created>1617987846432</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617987846432</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +347,7 @@
     <MESSAGE value="css en javascript klopte niet" />
     <MESSAGE value="probleem met asset functie op de server opgelost" />
     <MESSAGE value="probleem met register.blade.php opgelost" />
-    <option name="LAST_COMMIT_MESSAGE" value="probleem met register.blade.php opgelost" />
+    <MESSAGE value="database type verandert" />
+    <option name="LAST_COMMIT_MESSAGE" value="database type verandert" />
   </component>
 </project>
