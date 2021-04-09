@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\countries;
-use App\Models\country;
+use App\Models\Country;
 use App\Models\Province;
 use Illuminate\Http\Request;
 
