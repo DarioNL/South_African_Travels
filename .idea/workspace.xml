@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccommodationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccommodationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TravelsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Travel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Travel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/traveler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/traveler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_02_145939_create_travelers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_02_145939_create_travelers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TravelSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/accommodation/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travels/users/book.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travels/users/book.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617974737627</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="procfile toegevoegd voor de hosting">
+      <created>1617979855554</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617979855554</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +306,7 @@
     <MESSAGE value="code systeem toegevoegd aan accommodaties&#10;alle pagina's voor de bestemmingen gemaakt&#10;de besetmming controller uitgewerkt&#10;Jquery datatables geïntegreerd.&#10;accommodaties pagina's gemaakt&#10;accommodatie en bestemming routes gemaakt" />
     <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
     <MESSAGE value="text nav menu groter maken." />
-    <option name="LAST_COMMIT_MESSAGE" value="text nav menu groter maken." />
+    <MESSAGE value="procfile toegevoegd voor de hosting" />
+    <option name="LAST_COMMIT_MESSAGE" value="procfile toegevoegd voor de hosting" />
   </component>
 </project>
