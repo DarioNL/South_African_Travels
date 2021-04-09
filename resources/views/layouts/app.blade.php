@@ -116,7 +116,7 @@
         </main>
 
         @php($action = substr((Illuminate\Support\Facades\Route::currentRouteAction()), strpos(Illuminate\Support\Facades\Route::currentRouteAction(), "@") ))
-        <footer @if($action != '@show' or Illuminate\Support\Facades\Route::currentRouteAction() == 'App\Http\Controllers\CountriesController@show') style="position: absolute" @endif class=" text-center border-top   text-lg-start">
+        <footer @if($action != '@show' or Illuminate\Support\Facades\Route::currentRouteAction() == 'App\Http\Controllers\CountriesController@show' ) @if($action == '@showRegistrationForm') @else style="position: absolute" @endif @endif class=" text-center border-top   text-lg-start">
 
             <div class="page-container p-4">
 
