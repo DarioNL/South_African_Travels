@@ -294,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617980269746</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="css en javascript klopte niet">
+      <created>1617980455446</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617980455446</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +321,7 @@
     <MESSAGE value="fout verwijdert die gebeurt als een Accommodation of facility wilt toevoegen.&#10;edit functie aan facilities en Accommodation toegevoed&#10;delete functie aan travels en destination toegevoegd." />
     <MESSAGE value="text nav menu groter maken." />
     <MESSAGE value="procfile toegevoegd voor de hosting" />
-    <option name="LAST_COMMIT_MESSAGE" value="procfile toegevoegd voor de hosting" />
+    <MESSAGE value="css en javascript klopte niet" />
+    <option name="LAST_COMMIT_MESSAGE" value="css en javascript klopte niet" />
   </component>
 </project>
