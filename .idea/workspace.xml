@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cf143bac-e479-4639-b5ca-01f44d1847d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617981193733</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="probleem met register.blade.php opgelost">
+      <created>1617982446853</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1617982446853</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +339,7 @@
     <MESSAGE value="procfile toegevoegd voor de hosting" />
     <MESSAGE value="css en javascript klopte niet" />
     <MESSAGE value="probleem met asset functie op de server opgelost" />
-    <option name="LAST_COMMIT_MESSAGE" value="probleem met asset functie op de server opgelost" />
+    <MESSAGE value="probleem met register.blade.php opgelost" />
+    <option name="LAST_COMMIT_MESSAGE" value="probleem met register.blade.php opgelost" />
   </component>
 </project>
